@@ -14,12 +14,65 @@
   margin: 0 auto;
   max-width: 1200px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
+html {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 10px;
+}
+
+.btn {
+  width: 20.7rem;
+  height: 5.2rem;
+  padding: 1.5rem 4.5rem;
+  border: 2px solid #F1CDB3;
+  border-radius: 3rem;
+  background-color: #F1CDB3;
+  text-align: center;
+  color: #292929;
+  font-size: 1.7rem;
+  line-height: 130%;
+  letter-spacing: 0.06rem;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.btn:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.btn--ghost {
+  background-color: #ffffff;
+}
+
+.btn--round {
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 6%;
+}
+
+.btn--round:disabled {
+  color: #CDCDCD;
+  border-color: #CDCDCD;
+  background-color: #ffffff;
+  cursor: not-allowed;
+}
+
+.btn--round:active {
+  border-color: #F1CDB3;
+  background-color: #F1CDB3;
+}
+
+/* HEADER Start */
 .header {
-  background: radial-gradient(closest-corner, #5B483A, #262425);
+  background: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #58483A 0%, #262425 100%), #211F20;
   height: 136px;
 }
 
@@ -29,20 +82,20 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .header__logo__title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #F1CDB3;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #f1cdb3;
   font-size: 32px;
   letter-spacing: 6%;
   line-height: 110%;
 }
 
 .header__logo__subtitle {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 15px;
   letter-spacing: 10%;
   line-height: 110%;
@@ -57,10 +110,10 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   text-decoration: none;
   list-style: none;
   width: inherit;
@@ -68,19 +121,33 @@
 
 .nav__item {
   display: inline-block;
-  color: #CDCDCD;
+  color: #cdcdcd;
+}
+
+.nav__item--active {
+  color: #fafafa;
+  border-bottom: 3px solid #f1cdb3;
 }
 
 .nav__link {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 160%;
-  color: #CDCDCD;
+  color: #cdcdcd;
   text-decoration: none;
 }
 
-.nav__item--active.nav__link {
-  color: #FAFAFA;
-  border-bottom: 3px solid #F1CDB3;
-}
+/* HEADER End */
+/* START-SCREEN Start */
+/* START-SCREEN End */
+/* ABOUT Start */
+/* ABOUT End */
+/* PETS Start */
+/* PETS End */
+/* HELP Start */
+/* HELP End */
+/* DONATION Start */
+/* DONATION End */
+/* FOOTER Start */
+/* FOOTER End */
 /*# sourceMappingURL=main.css.map */

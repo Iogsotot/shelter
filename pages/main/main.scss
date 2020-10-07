@@ -8,49 +8,153 @@
 }
 
 .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
     max-width: 1200px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+}
+
+$primary-color: #F1CDB3;
+$primary-color--light : #FDDCC4;
+$primary-color--ghost: #ffffff;
+$color-dark: #292929;
+$color-disabled: #CDCDCD;
+$gradient-bg--header: url("../../assets/images/noise_transparent@2x.png"),
+radial-gradient(100% 215.42% at 0% 0%, #58483A 0%, #262425 100%),
+#211F20;
+$gradient-bg--footer: url("../../assets/images/noise_transparent@2x.png"),
+radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), 
+#211F20;
+
+
+
+.btn {
+    width: 20.7rem;
+    height: 5.2rem;
+    padding: 1.5rem 4.5rem;
+
+    border: 2px solid $primary-color;
+    border-radius: 3rem;
+
+    background-color: $primary-color;
+
+    text-align: center;
+    color: $color-dark;
+    font-size: 1.7rem;
+    line-height: 130%;
+    letter-spacing: 0.06rem;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+
+.btn:hover {
+    background-color: $primary-color--light;
+    border-color: $primary-color--light;
+    transition: all 250ms linear;
+}
+
+.btn--ghost {
+    background-color: $primary-color--ghost;
+}
+.btn--ghost:hover {
+}
+
+.btn--round {
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 6%;
+}
+.btn--round:hover {
+}
+.btn--round:disabled {
+    color: $color-disabled;
+    border-color: $color-disabled;
+    background-color: $primary-color--ghost;
+
+    cursor: not-allowed;
+}
+.btn--round:active {
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+
+h1 {
+}
+.title {
+}
+.text {
+}
+
+.links {
+}
+.links:active {
+}
+.links:hover {
+}
+
+.links--dark {
+}
+.links--dark:active {
+}
+.links--dark:hover {
+}
+
+/* HEADER Start */
+
 .header {
-background: radial-gradient(closest-corner, #5B483A, #262425);
-height: 136px;
+    background: $gradient-bg--header;
+    height: 136px;
 }
 
 .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    
+    &__title {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: #f1cdb3;
+        font-size: 32px;
+        letter-spacing: 6%;
+        line-height: 110%;
+    }
+    
+    &__subtitle {
+        color: #ffffff;
+        font-size: 15px;
+        letter-spacing: 10%;
+        line-height: 110%;
+    }
 }
 
-
-.logo {
-}
-
-.header__logo__title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #F1CDB3;
-    font-size: 32px;
-    letter-spacing: 6%;
-    line-height: 110%;
-
-}
-
-.header__logo__subtitle {
-    color: #FFFFFF;
-    font-size: 15px;
-    letter-spacing: 10%;
-    line-height: 110%;
-}
 
 .header__nav {
     width: 443px;
 }
 
 .header__nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     text-decoration: none;
     list-style: none;
@@ -59,21 +163,54 @@ height: 136px;
 
 .nav__item {
     display: inline-block;
-    color: #CDCDCD;
+    color: #cdcdcd;
+
+    &--active {
+        color: #fafafa;
+        border-bottom: 3px solid #f1cdb3;
+    }
 }
 
 .nav__link {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 160%;
-    color: #CDCDCD;
+    color: #cdcdcd;
     text-decoration: none;
 }
 
-.nav__item--active {
 
-    &.nav__link {
-    color: #FAFAFA;
-    border-bottom: 3px solid #F1CDB3;
-    }
+/* HEADER End */
+
+/* START-SCREEN Start */
+.start-screen {
 }
+.start-screen__title {
+}
+.title {
+}
+.start-screen__text {
+}
+.text {
+}
+.btn {
+}
+.start-screen .img {
+}
+/* START-SCREEN End */
+
+/* ABOUT Start */
+/* ABOUT End */
+/* PETS Start */
+.slide {
+}
+.slide:hover {
+}
+/* PETS End */
+/* HELP Start */
+/* HELP End */
+/* DONATION Start */
+/* DONATION End */
+/* FOOTER Start */
+/* FOOTER End */
+/*# sourceMappingURL=main.css.map */
