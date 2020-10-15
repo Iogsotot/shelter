@@ -24,6 +24,7 @@
     max-width: 1200px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    // justify-content: center;
     justify-content: space-between;
 }
 
@@ -153,8 +154,9 @@ h5 {
 /* HEADER Start */
 
 .header {
-    background: $gradient-bg--header;
-    height: 136px;
+    height: 13.6rem;
+    padding-top: 6rem;
+    margin-bottom: -21.6rem;
 }
 
 .header__logo {
@@ -183,7 +185,7 @@ h5 {
 
 
 .header__nav {
-    width: 443px;
+    width: 44.3rem;
 }
 
 .header__nav__list {
@@ -212,7 +214,7 @@ h5 {
 
 .nav__link {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 160%;
     color: #cdcdcd;
     text-decoration: none;
@@ -223,11 +225,30 @@ h5 {
 
 /* START-SCREEN Start */
 .start-screen {
+    background: $gradient-bg--header;
+    height: 90.8rem;
+    padding: 21.6rem 4rem 0rem;
+    // height: 100vh;
 }
+
+.start-screen__text-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 .start-screen__title {
+    width: 31rem;
+    height: 11.4rem;
+    color: $primary-color--ghost;
 }
 
 .start-screen__text {
+    height: 90.8rem;
+    width: 46rem;
+    margin: 4.2rem 4.2rem 4.2rem 0rem;
+    color: $color-disabled;
 }
 .text--L {
 }
@@ -236,7 +257,9 @@ h5 {
 .img {
 }
 /* START-SCREEN End */
-
+.about, .pets, .help, .donation, .footer {
+    display: none;
+}
 /* ABOUT Start */
 /* ABOUT End */
 /* PETS Start */
