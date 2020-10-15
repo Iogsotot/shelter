@@ -81,6 +81,7 @@ html {
   font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-weight: 400;
   font-style: normal;
+  color: #545454;
 }
 
 h2 {
@@ -108,6 +109,7 @@ h5 {
   font-family: Arial, 'Arial', Helvetica, Geneva, sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #4c4c4c;
 }
 
 .text--L {
@@ -118,6 +120,21 @@ h5 {
 .text--S {
   font-size: 1.2rem;
   line-height: 10%;
+}
+
+.text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* HEADER Start */
@@ -217,18 +234,48 @@ h5 {
 }
 
 .start-screen__text {
-  height: 90.8rem;
-  width: 46rem;
+  height: 7.2rem;
+  width: 45rem;
   margin: 4.2rem 4.2rem 4.2rem 0rem;
   color: #CDCDCD;
 }
 
 /* START-SCREEN End */
-.about, .pets, .help, .donation, .footer {
+.pets, .help, .donation, .footer {
   display: none;
 }
 
 /* ABOUT Start */
+.about {
+  height: 58.8rem;
+  background: #ffffff;
+}
+
+.about .wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 8rem auto 10rem;
+}
+
+.about__text-block {
+  width: 50%;
+  margin-left: 12rem;
+}
+
+.about__title {
+  width: 37rem;
+  height: 9rem;
+}
+
+.about__text {
+  width: 42rem;
+}
+
+.about__text:first-of-type {
+  margin: 2.5rem 0rem;
+}
+
 /* ABOUT End */
 /* PETS Start */
 /* PETS End */
