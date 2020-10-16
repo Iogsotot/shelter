@@ -12,6 +12,8 @@
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .wrapper {
@@ -31,8 +33,8 @@ html {
 }
 
 .btn {
-  width: 20.7rem;
-  height: 5.2rem;
+  display: table;
+  margin: 0 auto;
   padding: 1.5rem 4.5rem;
   border: 2px solid #F1CDB3;
   border-radius: 3rem;
@@ -56,13 +58,17 @@ html {
 }
 
 .btn--ghost {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .btn--round {
-  font-size: 2rem;
-  line-height: 115%;
-  letter-spacing: 6%;
+  position: relative;
+  height: 5.2rem;
+  width: 5.2rem;
+  padding: 0;
+  text-align: unset;
+  line-height: none;
+  letter-spacing: unset;
 }
 
 .btn--round:disabled {
@@ -241,10 +247,6 @@ h5 {
 }
 
 /* START-SCREEN End */
-.pets, .help, .donation, .footer {
-  display: none;
-}
-
 /* ABOUT Start */
 .about {
   height: 58.8rem;
@@ -278,6 +280,87 @@ h5 {
 
 /* ABOUT End */
 /* PETS Start */
+.pets {
+  height: 87.7rem;
+  padding: 8rem 0 10rem;
+  background-color: #f6f6f6;
+}
+
+.pets .wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pets__title {
+  width: 40rem;
+  text-align: center;
+}
+
+.pets__title > span {
+  display: inline-block;
+  width: 40rem;
+}
+
+.slider, .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.btn--round > svg {
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.arrow--left {
+  margin-right: 5.3rem;
+}
+
+.slide {
+  height: 43.5rem;
+  width: 27rem;
+  margin: 6rem 0;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.img-box {
+  width: 27rem;
+  height: 27rem;
+  background-color: #fafafa;
+}
+
+.slide:hover {
+  background-color: #ffffff;
+}
+
+.slide__title {
+  margin: 3rem auto;
+}
+
+.arrow--right {
+  margin-left: 5.3rem;
+}
+
 /* PETS End */
 /* HELP Start */
 /* HELP End */
@@ -285,4 +368,7 @@ h5 {
 /* DONATION End */
 /* FOOTER Start */
 /* FOOTER End */
+.help, .donation, .footer {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
