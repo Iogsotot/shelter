@@ -144,6 +144,15 @@ h5 {
           justify-content: center;
 }
 
+.link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06rem;
+  color: #F1CDB3;
+}
+
 /* HEADER Start */
 .header {
   height: 13.6rem;
@@ -484,8 +493,46 @@ h5 {
 
 /* DONATION End */
 /* FOOTER Start */
-/* FOOTER End */
 .footer {
-  display: none;
+  background: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  padding-top: 5.6rem;
 }
+
+.footer-left .contact:first-of-type {
+  margin-bottom: 4rem;
+}
+
+.footer-center .contact:first-of-type {
+  margin-bottom: 3.2rem;
+}
+
+.footer-right .footer__img {
+  vertical-align: bottom;
+}
+
+.footer__title {
+  width: 28rem;
+  color: #ffffff;
+}
+
+.footer__title:first-of-type {
+  margin-bottom: 4rem;
+}
+
+.footer__title:last-of-type {
+  margin-bottom: 3.4rem;
+}
+
+.footer__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2rem;
+}
+
+.contact__link {
+  vertical-align: middle;
+  line-height: 2.3rem;
+}
+
+/* FOOTER End */
 /*# sourceMappingURL=main.css.map */
