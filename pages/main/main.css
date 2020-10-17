@@ -280,31 +280,36 @@ h5 {
 .about {
   height: 58.8rem;
   background: #ffffff;
+  padding: 8rem 0 10rem;
 }
 
 .about .wrapper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 8rem auto 10rem;
+}
+
+.about__img {
+  display: block;
+  margin: 0 auto;
 }
 
 .about__text-block {
-  width: 50%;
   margin-left: 12rem;
 }
 
 .about__title {
   width: 37rem;
-  height: 9rem;
+  padding-top: 0.2rem;
+  letter-spacing: 0.21rem;
 }
 
 .about__text {
-  width: 42rem;
+  width: 43rem;
 }
 
 .about__text:first-of-type {
-  margin: 2.5rem 0rem;
+  margin: 2.3rem 0rem 2.5rem;
 }
 
 /* ABOUT End */

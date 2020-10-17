@@ -321,34 +321,34 @@ h5 {
 .about {
     height: 58.8rem;
     background: $primary-color--ghost;
+    padding: 8rem 0 10rem;
 
     & .wrapper {
         justify-content: center;
-        margin: 8rem auto 10rem;
     }
 }
 
+// .about__img-case {
+// }
+
 .about__img {
-    // flex-basis: 1;
-    // flex-grow: 1;
-    // flex-shrink: 0;
+    display: block;
+    margin: 0 auto;
 }
 .about__text-block {
-    // flex-basis: 1;
-    // flex-grow: 1;
-    // flex-shrink: 0;
-    width: 50%;
     margin-left: 12rem;
 }
 .about__title {
     width: 37rem;
-    height: 9rem;
+    // height: 9rem;
+    padding-top: 0.2rem;   //PP
+    letter-spacing: 0.21rem;  //PP
 }
 .about__text {
-    width: 42rem;
+    width: 43rem;
 }
 .about__text:first-of-type {
-    margin: 2.5rem 0rem;
+    margin: 2.3rem 0rem 2.5rem;   //PP
 } 
 /* ABOUT End */
 /* PETS Start */
