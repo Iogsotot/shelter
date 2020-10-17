@@ -354,22 +354,37 @@ h5 {
 /* PETS Start */
 .pets {
     height: 87.7rem;
-    padding: 8rem 0 10rem;
+    padding: 8.2rem 0 10rem;
     background-color: $primary-color--medium;
 
     & .wrapper {
     flex-direction: column;
     align-items: center;
+    
+    & > .btn {
+        padding: 1.2rem 4.297rem;    //PP
+        padding-top: 1.4rem;        //PP
+        letter-spacing: 0.103rem;     //PP
+    }
+
+    }
+
+    & .slide .btn {
+        padding: 1.3rem 4.35rem;    //PP
+        padding-top: 1.4rem;        //PP
+        letter-spacing: 0.1rem;     //PP
     }
 }
 
 .pets__title {
     width: 40rem;
     text-align: center;
+    padding-left: 0.1rem;           //PP
 }
 .pets__title > span {
     display: inline-block;
     width: 40rem;
+    letter-spacing: 0.21rem;        //PP
 }
 .slider, .slides {
     display: flex;
@@ -396,7 +411,8 @@ h5 {
     height: 43.5rem;
     width: 27rem;
 
-    margin: 6rem 0;
+    // margin: 5.8rem 0.8rem;
+    margin: 5.8rem 0.8rem 5.95rem;   //PP
     background-color: $color-medium;
     text-align: center;
 }
@@ -410,7 +426,8 @@ h5 {
     background-color: $primary-color--ghost;
 }
 .slide__title {
-    margin: 3rem auto;
+    margin: 3rem auto 4.6rem;
+    letter-spacing: 0.115rem;   //PP
 }
 .arrow--right {
     margin-left: 5.3rem;;

@@ -316,7 +316,7 @@ h5 {
 /* PETS Start */
 .pets {
   height: 87.7rem;
-  padding: 8rem 0 10rem;
+  padding: 8.2rem 0 10rem;
   background-color: #f6f6f6;
 }
 
@@ -330,14 +330,28 @@ h5 {
           align-items: center;
 }
 
+.pets .wrapper > .btn {
+  padding: 1.2rem 4.297rem;
+  padding-top: 1.4rem;
+  letter-spacing: 0.103rem;
+}
+
+.pets .slide .btn {
+  padding: 1.3rem 4.35rem;
+  padding-top: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
 .pets__title {
   width: 40rem;
   text-align: center;
+  padding-left: 0.1rem;
 }
 
 .pets__title > span {
   display: inline-block;
   width: 40rem;
+  letter-spacing: 0.21rem;
 }
 
 .slider, .slides {
@@ -372,7 +386,7 @@ h5 {
 .slide {
   height: 43.5rem;
   width: 27rem;
-  margin: 6rem 0;
+  margin: 5.8rem 0.8rem 5.95rem;
   background-color: #fafafa;
   text-align: center;
 }
@@ -388,7 +402,8 @@ h5 {
 }
 
 .slide__title {
-  margin: 3rem auto;
+  margin: 3rem auto 4.6rem;
+  letter-spacing: 0.115rem;
 }
 
 .arrow--right {
