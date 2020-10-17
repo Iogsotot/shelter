@@ -125,7 +125,8 @@ h5 {
 
 .text--S {
   font-size: 1.2rem;
-  line-height: 10%;
+  line-height: 110%;
+  color: #b2b2b2;
 }
 
 .text-block {
@@ -426,10 +427,65 @@ h5 {
 
 /* HELP End */
 /* DONATION Start */
+.donation {
+  height: 46.4rem;
+  background-color: #f6f6f6;
+  padding: 8rem 0 10rem;
+}
+
+.donation .wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.donation__img {
+  width: 50.5rem;
+  height: 26.1rem;
+}
+
+.donation__text-block {
+  margin-left: 3rem;
+}
+
+.donation__title {
+  width: 28.7rem;
+}
+
+.donation__subtitle {
+  margin: 2rem 0;
+}
+
+.wallet {
+  background-color: #F1CDB3;
+  border: 0px solid #F1CDB3;
+  border-radius: 0.9rem;
+  width: 34.3rem;
+  padding: 1rem 1.5rem;
+}
+
+.wallet__icon {
+  width: 3rem;
+  height: 2.3rem;
+  vertical-align: bottom;
+  margin-right: 1.5rem;
+}
+
+.wallet__text {
+  display: inline-block;
+}
+
+.donation__disclaimer {
+  font-style: italic;
+  width: 38rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
 /* DONATION End */
 /* FOOTER Start */
 /* FOOTER End */
-.donation, .footer {
+.footer {
   display: none;
 }
 /*# sourceMappingURL=main.css.map */
