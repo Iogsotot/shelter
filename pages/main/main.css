@@ -277,6 +277,12 @@ h5 {
   color: #CDCDCD;
 }
 
+@-moz-document url-prefix() {
+  .start-screen__text {
+    letter-spacing: 0.02rem;
+  }
+}
+
 /* START-SCREEN End */
 /* ABOUT Start */
 .about {
@@ -318,6 +324,12 @@ h5 {
 .about__text {
   width: 43rem;
   letter-spacing: 0rem;
+}
+
+@-moz-document url-prefix() {
+  .about__text {
+    letter-spacing: 0.02rem;
+  }
 }
 
 .about__text:first-of-type {

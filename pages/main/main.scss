@@ -315,6 +315,14 @@ h5 {
 
     color: $color-disabled;
 }
+@-moz-document url-prefix()
+{
+    .start-screen__text {
+        letter-spacing: 0.02rem;    // PP Mozilla
+    }
+}
+
+
 /* START-SCREEN End */
 
 /* ABOUT Start */
@@ -355,8 +363,15 @@ h5 {
 .about__text {
     width: 43rem;
     letter-spacing: 0rem;        // PP Chrome
-    // letter-spacing: 0.015rem;    // PP Mozilla
+    
 }
+@-moz-document url-prefix()
+{
+    .about__text {
+        letter-spacing: 0.02rem;    // PP Mozilla
+    }
+}
+
 .about__text:first-of-type {
     margin: 1rem 0rem 2.2rem;   //PP
 } 
