@@ -589,56 +589,87 @@ h5 {
 /* FOOTER Start */
 .footer {
     background: $gradient-bg--footer;
-    padding-top: 5.6rem;
-
-//     & .wrapper {
-//     }
-}
-
-
-.footer-left {
-
-    & .contact:first-of-type {
-        margin-bottom: 4rem;
-    }
-}
-.footer-center {
-
-    & .contact:first-of-type {
-        margin-bottom: 3.2rem;
-    }
-}
-.footer-right {
-    & .footer__img {
-        vertical-align: bottom;
-    }
+    padding-top: 4rem;
+    height: 35rem;
 }
 
 .footer__title {
     width: 28rem;
     color: $primary-color--ghost;
+    margin-top: 1.75rem;
+    letter-spacing: 0.21rem;        //PP h3
 }
 
-.footer__title:first-of-type {
-    margin-bottom: 4rem;
+.footer-left, .footer-center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 25.4rem;
 }
-.footer__title:last-of-type {
-    margin-bottom: 3.4rem;
+
+.footer-left {
+    margin-left: 0.04rem;       //PP
+
+    & .footer__title {
+        margin-bottom: 0.3rem;
+    }
 }
-// .contact {
-// }
+.footer-center {
+    align-items: flex-start;
+    height: 25.3rem;
+    // margin-left: -0.3rem;             //PP
+    & .contact:first-of-type {
+        margin-bottom: -0.5rem;         //PP
+    }
+
+    & .footer__title {
+        margin-left: -1rem;             //PP I know that it's very bad
+    }
+}
+
+
+.footer-right {
+    margin-right: -0.1rem;      //PP
+    & .footer__img {
+        vertical-align: bottom;
+    }
+}
+
 .footer__icon {
     display: inline-block;
     vertical-align: middle;
 
-    margin-right: 2rem;
+    margin-right: 1.8rem;
+    height: 4rem;
 }
+.footer__icon--phone {
+    height: 4rem;
+}
+
+.footer__icon--pin {
+    width: 3.2rem;
+    margin-right: 1.2rem;           
+    margin-left: -1.5rem;           //PP
+    padding-top: 0.3rem;            //PP
+    vertical-align: top;            //PP
+}
+
+.footer__icon--pin:nth-of-type(2) {     //PP
+    vertical-align: middle;             //PP
+}
+
+
 .contact__link {
     vertical-align: middle;
-    line-height: 2.3rem;
+    letter-spacing: 0.12rem;
 }
 
-
+.footer-center .contact:last-of-type .contact__link{ 
+    padding-top: 1rem;                                  //PP             
+} 
 /* FOOTER End */
 
 /*# sourceMappingURL=main.css.map */
