@@ -120,6 +120,7 @@ h5 {
 .text--L {
   font-size: 1.5rem;
   line-height: 160%;
+  letter-spacing: 0.02rem;
 }
 
 .text--S {
@@ -272,6 +273,7 @@ h5 {
   height: 8.5rem;
   width: 46rem;
   margin: 4.25rem 4.2rem 2.7rem 0rem;
+  letter-spacing: 0;
   color: #CDCDCD;
 }
 
@@ -289,6 +291,10 @@ h5 {
           justify-content: center;
 }
 
+.about .text--L {
+  line-height: 160%;
+}
+
 .about__img {
   display: block;
   margin: 0 auto;
@@ -296,20 +302,26 @@ h5 {
 
 .about__text-block {
   margin-left: 12rem;
+  height: 39.4rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .about__title {
   width: 37rem;
-  padding-top: 0.2rem;
+  padding-top: 1.4rem;
   letter-spacing: 0.21rem;
+  margin-bottom: 1rem;
 }
 
 .about__text {
   width: 43rem;
+  letter-spacing: 0rem;
 }
 
 .about__text:first-of-type {
-  margin: 2.3rem 0rem 2.5rem;
+  margin: 1rem 0rem 2.2rem;
 }
 
 /* ABOUT End */
@@ -386,6 +398,8 @@ h5 {
   height: 43.5rem;
   width: 27rem;
   margin: 5.8rem 0.1rem 5.95rem;
+  border: 0px solid transparent;
+  border-radius: 0.9rem;
   background-color: #fafafa;
   text-align: center;
 }
@@ -394,6 +408,9 @@ h5 {
   width: 27rem;
   height: 27rem;
   background-color: #fafafa;
+  border: 0px solid transparent;
+  border-top-right-radius: 0.9rem;
+  border-top-left-radius: 0.9rem;
 }
 
 .slide:hover {
