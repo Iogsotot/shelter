@@ -272,11 +272,11 @@ h5 {
     & .btn {
         margin: 0;
         padding: 1.3rem 4.57rem;
-        padding-left: 4.27rem;;    //del
-        padding-right: 4.27rem;    //del
-        padding-top: 1.4rem;       //del
-        padding-bottom: 1.2rem;    //del
-        letter-spacing: 0.103rem;  //del
+        padding-left: 4.27rem;;    //del    PP
+        padding-right: 4.3rem;     //del    PP
+        padding-top: 1.4rem;       //del    PP
+        padding-bottom: 1.2rem;    //del    PP
+        letter-spacing: 0.103rem;  //del    PP
     }
 }
 
@@ -412,7 +412,7 @@ h5 {
     width: 27rem;
 
     // margin: 5.8rem 0.8rem;
-    margin: 5.8rem 0.8rem 5.95rem;   //PP
+    margin: 5.8rem 0.1rem 5.95rem;   //PP
     background-color: $color-medium;
     text-align: center;
 }
