@@ -552,8 +552,10 @@ h5 {
     vertical-align: bottom;
     margin-right: 1.5rem;
 }
-.wallet__text {
+.wallet__link {
     display: inline-block;
+    font-size: 2rem;
+    line-height: 115%;
 }
 
 .donation__disclaimer {
