@@ -154,7 +154,7 @@ h5 {
 }
 .text--S {
     font-size: 1.2rem;
-    line-height: 110%;
+    line-height: 150%;
     color: $color-dark-note;
 }
 .text-block {
@@ -514,48 +514,69 @@ h5 {
 .donation {
     height: 46.4rem;
     background-color: $primary-color--medium;
-    padding: 8rem 0 10rem;
+    padding: 8.3rem 0 10rem;            // PP edit
     & .wrapper {
     justify-content: center;
+    align-items: flex-start;
+    // align-self: start;
     }
 }
 
 .donation__img {
     width: 50.5rem;
     height: 26.1rem;
+    margin-top: 0.9rem;         //PP
+    margin-right: 0.2rem;       //PP
 }
 
 .donation__text-block {
-    margin-left: 3rem;
+    margin-left: 2.8rem;
 }
 
 .donation__title {
-    width: 28.7rem;
+    width: 29.5rem;
+    letter-spacing: 0.21rem;    //PP h3
 }
 .donation__subtitle {
-    margin: 2rem 0;
+    margin: 2rem 0 1.9rem;
+    letter-spacing: 0.09rem;     //PP h5
 }
 
 .wallet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
     background-color: $primary-color;
     border: 0px solid $primary-color;
     border-radius: 0.9rem;
 
-    width: 34.3rem;
-    padding: 1rem 1.5rem;
+    width: 34.9rem;
+    height: 4.3rem;
+    // padding: 1rem 1.5rem;
+    padding: 1rem 1.4rem 1rem 1.3rem;      //PP
     // margin: 2rem 0;
 }
 
 .wallet__icon {
-    width: 3rem;
-    height: 2.3rem;
-    vertical-align: bottom;
-    margin-right: 1.5rem;
+    display: block;
+    // width: 3rem;
+    // height: 2.3rem;
+    width: 3.54rem;             //PP
+    height: 3.1rem;             //PP
+    // vertical-align: bottom;
+    // margin-right: 1.5rem;
+    // margin-top: 0.45rem;
 }
 .wallet__link {
     display: inline-block;
+    
     font-size: 2rem;
+    text-decoration: none;
     line-height: 115%;
+    letter-spacing: 0.123rem;
 }
 
 .donation__disclaimer {
