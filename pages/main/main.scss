@@ -306,19 +306,18 @@ h5 {
 
 .start-screen__text {
     // height: 7.3rem;
-    // width: 46rem;                        // вернуть после КЧ
     // margin: 4.2rem 4.2rem 4.2rem 0rem;
     height: 8.5rem;                         // del
-    width: 46rem;                           //del
+    width: 46rem;                          
     margin: 4.25rem 4.2rem 2.7rem 0rem;     //del
     letter-spacing: 0;
 
     color: $color-disabled;
 }
-@-moz-document url-prefix()
-{
+@-moz-document url-prefix() {
     .start-screen__text {
         letter-spacing: 0.02rem;    // PP Mozilla
+
     }
 }
 

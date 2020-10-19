@@ -60,9 +60,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
 
 // Buttons
 .btn {
-    // display: inline-block;
-    // width: 20.7rem;
-    // height: 5.2rem;
+    display: inline-block;
     margin: 0 auto;         // костыль?
 
     padding: 1.5rem 4.5rem;
@@ -99,7 +97,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
     position: relative;
     height: 5.2rem;
     width: 5.2rem;
-    padding: 2rem 2rem;
+    padding: 1.4rem 2rem 2rem;
 
     text-align: unset;
     line-height: none;
@@ -107,13 +105,19 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
 }
 // .btn--round:hover {
 // }
-.btn--round:disabled {
+.btn.disabled, .arrow.disabled{
     color: $color-disabled;
     border-color: $color-disabled;
-    background-color: $primary-color--ghost;
+    // background-color: $primary-color--ghost;
+    fill: $color-disabled;
 
     cursor: not-allowed;
 }
+.btn.btn.disabled:hover {
+    background-color: unset;
+    border-color: unset;
+}
+
 .btn--round:active {
     border-color: $primary-color;
     background-color: $primary-color;
@@ -265,26 +269,33 @@ h5 {
 
 /* PETS Start */
 .pets {
-    height: 87.7rem;
-    padding: 8.1rem 0 10rem;
+    height: 134.2rem;
+    padding: 8.2rem 0 10rem;
     background-color: $primary-color--medium;
 
     & .wrapper {
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
     
-    & > .btn {
-        padding: 1.2rem 4.297rem;    //PP
-        padding-top: 1.4rem;        //PP
-        letter-spacing: 0.103rem;     //PP
-    }
+        & > .btn {
+            padding: 1.2rem 4.297rem;    //PP
+            padding-top: 1.4rem;        //PP
+            letter-spacing: 0.103rem;     //PP
+            
+        }
 
     }
 
     & .slide .btn {
-        padding: 1.3rem 4.35rem;    //PP
-        // padding-top: 1.4rem;        //PP
-        letter-spacing: 0.1rem;     //PP
+        padding: 1.35rem 4.35rem 1.2rem;
+        letter-spacing: 0.1rem;              //PP
+    }
+}
+
+@-moz-document url-prefix() {
+    .pets {
+        padding: 8.1rem 0 10rem;        //PP Mozilla
     }
 }
 
@@ -300,11 +311,27 @@ h5 {
 }
 .slider, .slides {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
     width: 100%;
+}
+
+.slider {
+    margin: 2.8rem 0 6rem;
+}
+
+
+
+// .slides {
+
+// }
+
+
+.control-panel .btn {
+    margin: 0rem 0.9rem;
 }
 
 .btn--round > svg {
@@ -314,8 +341,9 @@ h5 {
     transform: translate(-50%);
 }
 
-// .arrow {
-// }
+.arrow {
+    fill: $color-dark;
+}
 .arrow--left {
     margin-right: 5.3rem;    
 }
@@ -324,7 +352,7 @@ h5 {
     width: 27rem;
 
     // margin: 5.8rem 0.8rem;
-    margin: 5.8rem 0.1rem 5.95rem;   //PP
+    margin: 3rem 0rem 0rem;
 
     border: 0px solid transparent;
     border-radius: 0.9rem;
@@ -344,11 +372,12 @@ h5 {
     background-color: $primary-color--ghost;
 }
 .slide__title {
-    margin: 3rem auto 4.5rem;   //PP
+    margin: 3rem auto 3rem;   //PP
     letter-spacing: 0.115rem;   //PP
 }
-.arrow--right {
-    margin-left: 5.3rem;;
+.page-number {
+    text-align: center;
+    vertical-align: top; 
 }
 /* PETS End */
 
@@ -398,7 +427,6 @@ h5 {
 
 
 .footer-right {
-    margin-right: -0.1rem;      //PP
     & .footer__img {
         vertical-align: bottom;
     }

@@ -33,6 +33,7 @@ html {
 }
 
 .btn {
+  display: inline-block;
   margin: 0 auto;
   padding: 1.5rem 4.5rem;
   border: 2px solid #F1CDB3;
@@ -64,17 +65,22 @@ html {
   position: relative;
   height: 5.2rem;
   width: 5.2rem;
-  padding: 2rem 2rem;
+  padding: 1.4rem 2rem 2rem;
   text-align: unset;
   line-height: none;
   letter-spacing: unset;
 }
 
-.btn--round:disabled {
+.btn.disabled, .arrow.disabled {
   color: #CDCDCD;
   border-color: #CDCDCD;
-  background-color: #ffffff;
+  fill: #CDCDCD;
   cursor: not-allowed;
+}
+
+.btn.btn.disabled:hover {
+  background-color: unset;
+  border-color: unset;
 }
 
 .btn--round:active {
@@ -227,8 +233,8 @@ h5 {
 /* HEADER End */
 /* PETS Start */
 .pets {
-  height: 87.7rem;
-  padding: 8.1rem 0 10rem;
+  height: 134.2rem;
+  padding: 8.2rem 0 10rem;
   background-color: #f6f6f6;
 }
 
@@ -240,6 +246,8 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .pets .wrapper > .btn {
@@ -249,8 +257,14 @@ h5 {
 }
 
 .pets .slide .btn {
-  padding: 1.3rem 4.35rem;
+  padding: 1.35rem 4.35rem 1.2rem;
   letter-spacing: 0.1rem;
+}
+
+@-moz-document url-prefix() {
+  .pets {
+    padding: 8.1rem 0 10rem;
+  }
 }
 
 .pets__title {
@@ -269,6 +283,8 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -282,12 +298,24 @@ h5 {
   width: 100%;
 }
 
+.slider {
+  margin: 2.8rem 0 6rem;
+}
+
+.control-panel .btn {
+  margin: 0rem 0.9rem;
+}
+
 .btn--round > svg {
   position: absolute;
   top: calc(50% - 3px);
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+}
+
+.arrow {
+  fill: #292929;
 }
 
 .arrow--left {
@@ -297,7 +325,7 @@ h5 {
 .slide {
   height: 43.5rem;
   width: 27rem;
-  margin: 5.8rem 0.1rem 5.95rem;
+  margin: 3rem 0rem 0rem;
   border: 0px solid transparent;
   border-radius: 0.9rem;
   background-color: #fafafa;
@@ -318,12 +346,13 @@ h5 {
 }
 
 .slide__title {
-  margin: 3rem auto 4.5rem;
+  margin: 3rem auto 3rem;
   letter-spacing: 0.115rem;
 }
 
-.arrow--right {
-  margin-left: 5.3rem;
+.page-number {
+  text-align: center;
+  vertical-align: top;
 }
 
 /* PETS End */
@@ -383,10 +412,6 @@ h5 {
   margin-left: -1rem;
 }
 
-.footer-right {
-  margin-right: -0.1rem;
-}
-
 .footer-right .footer__img {
   vertical-align: bottom;
 }
@@ -424,4 +449,4 @@ h5 {
 }
 
 /* FOOTER End */
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=pets.css.map */
