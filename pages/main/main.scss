@@ -43,9 +43,6 @@ html {
     // .about, .pets, .help, .donation, .footer {
     //     display: none;
     // }  
-    .footer {
-        display: none;
-    }  
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
@@ -194,6 +191,19 @@ h5 {
     line-height: 150%;
     color: $color-dark-note;
 }
+
+@-moz-document url-prefix() { 
+    @media (max-width: 1279px) and (min-width: 768px) {
+        .text--S {
+            letter-spacing: -0.015rem;
+        }
+    }
+}
+
+
+
+
+
 .text-block {
     display: flex;
     flex-direction: column;
@@ -407,8 +417,16 @@ h5 {
     }
 }
 
-@media (max-width: 767px) and (min-width: 320px) {
+// @-moz-document url-prefix() {
+//     @media (max-width: 1279px) and (min-width: 768px) {
+//         & .btn {
+//             margin-left: unset;       //PP pron
+//         }
+//     }
+// }
 
+@media (max-width: 767px) and (min-width: 320px) {
+    
 }
 
 @media (max-width: 319px) {}
@@ -617,9 +635,9 @@ h5 {
     .slide:first-of-type {
         margin-right: 4rem;
     }
-    .slide .img-box {
-        // margin-left: -0.1rem;    //PP pron
-    }
+    // .slide .img-box {
+    //     // margin-left: -0.1rem;    //PP pron
+    // }
     .slide {
         margin: 5.8rem 0.05rem 5.95rem;   //PP
     }
@@ -704,7 +722,7 @@ h5 {
 @media (max-width: 1279px) and (min-width: 768px) {
     .help {
         padding: 8.2rem 0 7rem;
-        height: unset;
+        height: 77.9rem;
     }
     
     .help__icons-rows {
@@ -807,7 +825,7 @@ h5 {
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .donation {
-        height: unset;
+        height: 78.3rem;
         padding: 8.2rem 0 10rem;    //PP needs
         
         & .wrapper {
@@ -822,8 +840,8 @@ h5 {
 
         & .donation__img {
             margin-top: 6rem;
+            margin-left: -0.1rem;   //Во славу PP!
         }
-
     }
 }
 
@@ -873,7 +891,6 @@ h5 {
     }
 }
 
-
 .footer-right {
     margin-right: -0.1rem;      //PP
     & .footer__img {
@@ -904,7 +921,6 @@ h5 {
     vertical-align: middle;             //PP
 }
 
-
 .contact__link {
     vertical-align: middle;
     letter-spacing: 0.12rem;
@@ -913,6 +929,54 @@ h5 {
 .footer-center .contact:last-of-type .contact__link{ 
     padding-top: 1rem;                                  //PP             
 } 
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .footer{
+        height: unset;
+        padding-top: 1.4rem;
+
+        & .wrapper {
+            flex-wrap: wrap;
+            // justify-content: space-between;
+            justify-content: center;
+            padding: 0rem 0rem 0rem 0rem;
+            
+        }
+
+        .footer-center, .footer-left, .footer-right {
+            margin: 0 auto;
+            padding: unset;
+        }
+        .footer-left {
+            width: 27rem;
+        }
+        .footer-center {
+            width: 30rem;
+        }
+
+
+        .footer-center .contact:first-of-type {
+            margin-bottom: unset;         //PP
+        }
+        .footer-center .footer__title {
+            margin-right: unset;
+            margin-left: unset;
+            margin-bottom: 0.5rem;
+            vertical-align: middle;             //PP I know that it's very bad
+        }
+        .footer__icon--pin {
+            margin: unset;
+            margin-right: 1.2rem;
+            margin-left: -0.5rem;
+        }
+
+        .footer-right {
+            margin-top: 6.1rem;
+            align-self: center;
+        }
+    }
+
+}
 /* FOOTER End */
 
 /*# sourceMappingURL=main.css.map */

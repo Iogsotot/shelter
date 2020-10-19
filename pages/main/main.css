@@ -36,9 +36,6 @@ html {
   .wrapper {
     max-width: 708px;
   }
-  .footer {
-    display: none;
-  }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
@@ -152,6 +149,14 @@ h5 {
   font-size: 1.2rem;
   line-height: 150%;
   color: #b2b2b2;
+}
+
+@-moz-document url-prefix() {
+  @media (max-width: 1279px) and (min-width: 768px) {
+    .text--S {
+      letter-spacing: -0.015rem;
+    }
+  }
 }
 
 .text-block {
@@ -664,7 +669,7 @@ h5 {
 @media (max-width: 1279px) and (min-width: 768px) {
   .help {
     padding: 8.2rem 0 7rem;
-    height: unset;
+    height: 77.9rem;
   }
   .help__icons-rows {
     width: unset;
@@ -769,7 +774,7 @@ h5 {
 
 @media (max-width: 1279px) and (min-width: 768px) {
   .donation {
-    height: unset;
+    height: 78.3rem;
     padding: 8.2rem 0 10rem;
   }
   .donation .wrapper {
@@ -787,6 +792,7 @@ h5 {
   }
   .donation .donation__img {
     margin-top: 6rem;
+    margin-left: -0.1rem;
   }
 }
 
@@ -885,6 +891,51 @@ h5 {
 
 .footer-center .contact:last-of-type .contact__link {
   padding-top: 1rem;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .footer {
+    height: unset;
+    padding-top: 1.4rem;
+  }
+  .footer .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+  .footer .footer-center, .footer .footer-left, .footer .footer-right {
+    margin: 0 auto;
+    padding: unset;
+  }
+  .footer .footer-left {
+    width: 27rem;
+  }
+  .footer .footer-center {
+    width: 30rem;
+  }
+  .footer .footer-center .contact:first-of-type {
+    margin-bottom: unset;
+  }
+  .footer .footer-center .footer__title {
+    margin-right: unset;
+    margin-left: unset;
+    margin-bottom: 0.5rem;
+    vertical-align: middle;
+  }
+  .footer .footer__icon--pin {
+    margin: unset;
+    margin-right: 1.2rem;
+    margin-left: -0.5rem;
+  }
+  .footer .footer-right {
+    margin-top: 6.1rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 /* FOOTER End */
