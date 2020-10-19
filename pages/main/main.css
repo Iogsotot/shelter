@@ -36,7 +36,7 @@ html {
   .wrapper {
     max-width: 708px;
   }
-  .help, .donation, .footer {
+  .donation, .footer {
     display: none;
   }
 }
@@ -561,8 +561,8 @@ h5 {
   .slide:first-of-type {
     margin-right: 4rem;
   }
-  .slide .img-box {
-    margin-left: -0.1rem;
+  .slide {
+    margin: 5.8rem 0.05rem 5.95rem;
   }
 }
 
@@ -659,6 +659,30 @@ h5 {
 .icon__title {
   text-align: center;
   letter-spacing: 0.12rem;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .help {
+    padding: 8.2rem 0 10rem;
+  }
+  .help__icons-rows {
+    width: unset;
+    padding: 0 0.9rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .help__icons-rows .icon-block {
+    margin: 2.8rem 3rem;
+    height: 11.3rem;
+    width: 17rem;
+  }
+  .help__icon {
+    margin: 0 auto 2.9rem;
+  }
+  .help__title {
+    margin-bottom: 3rem;
+  }
 }
 
 /* HELP End */

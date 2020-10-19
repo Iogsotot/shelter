@@ -43,7 +43,7 @@ html {
     // .about, .pets, .help, .donation, .footer {
     //     display: none;
     // }  
-    .help, .donation, .footer {
+    .donation, .footer {
         display: none;
     }  
 }
@@ -618,9 +618,11 @@ h5 {
         margin-right: 4rem;
     }
     .slide .img-box {
-        margin-left: -0.1rem;    //PP pron
+        // margin-left: -0.1rem;    //PP pron
     }
-
+    .slide {
+        margin: 5.8rem 0.05rem 5.95rem;   //PP
+    }
 }
 
 /* PETS End */
@@ -687,7 +689,6 @@ h5 {
     margin-right: 17.1rem;      //PP
 }
 
-
 .help__icon {
     display: block;;
     width: 6rem;
@@ -699,6 +700,32 @@ h5 {
     text-align: center;
     letter-spacing: 0.12rem;    //PP
 }
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .help {
+        padding: 8.2rem 0 10rem;
+    }
+    
+    .help__icons-rows {
+        width: unset;
+        padding: 0 0.9rem;
+        justify-content: space-between;
+        & .icon-block {
+            margin: 2.8rem 3rem;
+            height: 11.3rem;
+            width: 17rem;
+        }
+    }
+    .help__icon {
+        margin: 0 auto 2.9rem;
+    }
+
+    .help__title {
+        margin-bottom: 3rem;
+    }
+
+}
+
 /* HELP End */
 
 /* DONATION Start */
