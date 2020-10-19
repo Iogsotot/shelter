@@ -1,0 +1,442 @@
+@font-face {
+    font-family: 'Georgia';
+    src: url('../../assets/fonts/Georgia/Georgia.woff') format('woff'),
+        url('../../assets/fonts/Georgia/Georgia-Bold.woff2') format('woff2'),
+        local('Georgia Regular'), local('Georgia-Regular');
+        font-style: normal;
+        font-weight: 400;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: all .2s;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    // justify-content: center;
+    justify-content: space-between;
+}
+
+html {
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+}
+
+$primary-color: #F1CDB3;
+$primary-color--light: #FDDCC4;
+$primary-color--medium: #f6f6f6;
+$primary-color--ghost: #ffffff;
+
+$color-dark: #292929;
+$color-dark-title: #545454;
+$color-dark-text: #4c4c4c;
+$color-dark-note: #b2b2b2;
+$color-medium: #fafafa;
+$color-disabled: #CDCDCD;
+
+$gradient-bg--header: url("../../assets/images/noise_transparent@2x.png"),
+radial-gradient(100% 215.42% at 0% 0%, #58483A 0%, #262425 100%),
+#211F20;
+$gradient-bg--footer: url("../../assets/images/noise_transparent@2x.png"),
+radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), 
+#211F20;
+
+// .img {
+// }
+// .icon {
+// }
+
+// Buttons
+.btn {
+    // display: inline-block;
+    // width: 20.7rem;
+    // height: 5.2rem;
+    margin: 0 auto;         // костыль?
+
+    padding: 1.5rem 4.5rem;
+
+    border: 2px solid $primary-color;
+    border-radius: 3rem;
+
+    background-color: $primary-color;
+
+    text-align: center;
+    color: $color-dark;
+    font-size: 1.7rem;
+    line-height: 130%;
+    letter-spacing: 0.06rem;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+
+.btn:hover {
+    background-color: $primary-color--light;
+    border-color: $primary-color--light;
+    transition: all 250ms linear;
+}
+
+.btn--ghost {
+    background-color: transparent;
+}
+// .btn--ghost:hover {
+// }
+
+.btn--round {
+    position: relative;
+    height: 5.2rem;
+    width: 5.2rem;
+    padding: 2rem 2rem;
+
+    text-align: unset;
+    line-height: none;
+    letter-spacing: unset;
+}
+// .btn--round:hover {
+// }
+.btn--round:disabled {
+    color: $color-disabled;
+    border-color: $color-disabled;
+    background-color: $primary-color--ghost;
+
+    cursor: not-allowed;
+}
+.btn--round:active {
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+// Text blocks, title etc
+.title {
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $color-dark-title;
+}
+h2 {
+    font-size: 4.4rem;
+    line-height: 130%;
+}
+h3 {
+    font-size: 3.5rem;
+    line-height: 130%;
+    letter-spacing: 0.06rem;
+}
+h4 {
+    font-size: 2rem;
+    line-height: 115%;
+}
+h5 {
+    font-size: 1.5rem;
+    line-height: 110%;
+}
+.text {
+    font-family: Arial, 'Arial', Helvetica, Geneva, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $color-dark-text;
+}
+.text--L {
+    font-size: 1.5rem;
+    line-height: 160%;
+    // letter-spacing: 0.02rem;
+    letter-spacing: 0rem;
+}
+.text--S {
+    font-size: 1.2rem;
+    line-height: 150%;
+    color: $color-dark-note;
+}
+.text-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+
+// links
+.link {
+    display: inline-block;
+
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06rem;
+    color: $primary-color;
+
+}
+// .links:active {
+// }
+// .links:hover {
+// }
+
+// .links--dark {
+// }
+// .links--dark:active {
+// }
+// .links--dark:hover {
+// }
+
+/* HEADER Start */
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 12rem;
+    padding-top: 3.2rem;
+}
+
+.header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    
+    &__title {
+        color: $color-dark-title;
+        font-size: 3.2rem;
+        letter-spacing: 0.19rem;
+        line-height: 110%;
+    }
+    
+    &__subtitle {
+        color: $color-dark;
+        font-size: 1.3rem;
+        letter-spacing: 0.13rem;
+        line-height: 110%;
+        margin-top: 0.9rem;
+        padding-left: 0.4rem;
+    }
+}
+
+.header__nav {
+    padding-top: 1.4rem;
+    width: 44.3rem;
+}
+
+.header__nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    width: inherit;
+}
+
+.nav__item {
+    display: inline-block;
+    color:  $color-dark-title;
+
+    &--active {
+        color: $color-dark;
+        border-bottom: 3px solid #f1cdb3;
+    }
+}
+
+.nav__link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 160%;
+    color: inherit;
+    text-decoration: none;
+}
+/* HEADER End */
+
+/* PETS Start */
+.pets {
+    height: 87.7rem;
+    padding: 8.1rem 0 10rem;
+    background-color: $primary-color--medium;
+
+    & .wrapper {
+    flex-direction: column;
+    align-items: center;
+    
+    & > .btn {
+        padding: 1.2rem 4.297rem;    //PP
+        padding-top: 1.4rem;        //PP
+        letter-spacing: 0.103rem;     //PP
+    }
+
+    }
+
+    & .slide .btn {
+        padding: 1.3rem 4.35rem;    //PP
+        // padding-top: 1.4rem;        //PP
+        letter-spacing: 0.1rem;     //PP
+    }
+}
+
+.pets__title {
+    width: 40rem;
+    text-align: center;
+    padding-left: 0.1rem;           //PP
+}
+.pets__title > span {
+    display: inline-block;
+    width: 40rem;
+    letter-spacing: 0.21rem;        //PP
+}
+.slider, .slides {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.btn--round > svg {
+    position: absolute;
+    top: calc(50% - 3px);
+    left: 50%;
+    transform: translate(-50%);
+}
+
+// .arrow {
+// }
+.arrow--left {
+    margin-right: 5.3rem;    
+}
+.slide {
+    height: 43.5rem;
+    width: 27rem;
+
+    // margin: 5.8rem 0.8rem;
+    margin: 5.8rem 0.1rem 5.95rem;   //PP
+
+    border: 0px solid transparent;
+    border-radius: 0.9rem;
+    background-color: $color-medium;
+    text-align: center;
+}
+
+.img-box {
+    width: 27rem;
+    height: 27rem;
+    background-color: $color-medium; 
+    border: 0px solid transparent;
+    border-top-right-radius: 0.9rem;
+    border-top-left-radius: 0.9rem;
+}
+.slide:hover {
+    background-color: $primary-color--ghost;
+}
+.slide__title {
+    margin: 3rem auto 4.5rem;   //PP
+    letter-spacing: 0.115rem;   //PP
+}
+.arrow--right {
+    margin-left: 5.3rem;;
+}
+/* PETS End */
+
+/* FOOTER Start */
+.footer {
+    background: $gradient-bg--footer;
+    padding-top: 4rem;
+    height: 35rem;
+}
+
+.footer__title {
+    width: 28rem;
+    color: $primary-color--ghost;
+    margin-top: 1.75rem;
+    letter-spacing: 0.21rem;        //PP h3
+}
+
+.footer-left, .footer-center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 25.4rem;
+}
+
+.footer-left {
+    margin-left: 0.04rem;       //PP
+
+    & .footer__title {
+        margin-bottom: 0.3rem;
+    }
+}
+.footer-center {
+    align-items: flex-start;
+    height: 25.3rem;
+    // margin-left: -0.3rem;             //PP
+    & .contact:first-of-type {
+        margin-bottom: -0.5rem;         //PP
+    }
+
+    & .footer__title {
+        margin-left: -1rem;             //PP I know that it's very bad
+    }
+}
+
+
+.footer-right {
+    margin-right: -0.1rem;      //PP
+    & .footer__img {
+        vertical-align: bottom;
+    }
+}
+
+.footer__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-right: 1.8rem;
+    height: 4rem;
+}
+.footer__icon--phone {
+    height: 4rem;
+}
+
+.footer__icon--pin {
+    width: 3.2rem;
+    margin-right: 1.2rem;           
+    margin-left: -1.5rem;           //PP
+    padding-top: 0.3rem;            //PP
+    vertical-align: top;            //PP
+}
+
+.footer__icon--pin:nth-of-type(2) {     //PP
+    vertical-align: middle;             //PP
+}
+
+
+.contact__link {
+    vertical-align: middle;
+    letter-spacing: 0.12rem;
+}
+
+.footer-center .contact:last-of-type .contact__link{ 
+    padding-top: 1rem;                                  //PP             
+} 
+/* FOOTER End */
+
+/*# sourceMappingURL=main.css.map */
+
