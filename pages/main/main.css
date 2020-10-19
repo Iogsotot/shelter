@@ -36,7 +36,7 @@ html {
   .wrapper {
     max-width: 708px;
   }
-  .donation, .footer {
+  .footer {
     display: none;
   }
 }
@@ -663,7 +663,8 @@ h5 {
 
 @media (max-width: 1279px) and (min-width: 768px) {
   .help {
-    padding: 8.2rem 0 10rem;
+    padding: 8.2rem 0 7rem;
+    height: unset;
   }
   .help__icons-rows {
     width: unset;
@@ -764,6 +765,29 @@ h5 {
   width: 38rem;
   text-align: left;
   margin-top: 2rem;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .donation {
+    height: unset;
+    padding: 8.2rem 0 10rem;
+  }
+  .donation .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .donation .donation__img, .donation .donation__text-block {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: unset;
+    padding: unset;
+  }
+  .donation .donation__img {
+    margin-top: 6rem;
+  }
 }
 
 /* DONATION End */

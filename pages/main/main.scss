@@ -43,7 +43,7 @@ html {
     // .about, .pets, .help, .donation, .footer {
     //     display: none;
     // }  
-    .donation, .footer {
+    .footer {
         display: none;
     }  
 }
@@ -703,7 +703,8 @@ h5 {
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .help {
-        padding: 8.2rem 0 10rem;
+        padding: 8.2rem 0 7rem;
+        height: unset;
     }
     
     .help__icons-rows {
@@ -803,6 +804,30 @@ h5 {
     text-align: left;
     margin-top: 2rem;
 }
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .donation {
+        height: unset;
+        padding: 8.2rem 0 10rem;    //PP needs
+        
+        & .wrapper {
+            flex-direction: column-reverse;
+        }
+
+        & .donation__img, & .donation__text-block {
+            align-self: center;
+            margin: unset;
+            padding: unset;
+        }
+
+        & .donation__img {
+            margin-top: 6rem;
+        }
+
+    }
+}
+
+
 /* DONATION End */
 /* FOOTER Start */
 .footer {
