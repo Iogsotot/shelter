@@ -16,6 +16,11 @@
   transition: all .2s;
 }
 
+html {
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+  font-size: 10px;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,11 +30,6 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-html {
-  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
-  font-size: 10px;
 }
 
 .btn {
@@ -163,8 +163,10 @@ h5 {
 .header {
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
   height: 12rem;
   padding-top: 3.2rem;
+  background-color: #ffffff;
 }
 
 .header__logo {
@@ -308,7 +310,7 @@ h5 {
 
 .btn--round > svg {
   position: absolute;
-  top: calc(50% - 3px);
+  top: calc(50% - 5px);
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);

@@ -16,6 +16,10 @@
     -webkit-box-sizing: border-box;
     transition: all .2s;
 }
+html {
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+}
 
 .wrapper {
     display: -webkit-box;
@@ -28,11 +32,31 @@
     // justify-content: center;
     justify-content: space-between;
 }
+@media (min-width: 1280px) {
 
-html {
-    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
-    font-size: 10px;
 }
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .wrapper {
+        max-width: 708px;
+    }
+    .about, .pets, .help, .donation, .footer {
+        display: none;
+    }  
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .wrapper {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 319px) {}
+
+.btn.w768 {
+    display: none;
+}
+
 
 $primary-color: #F1CDB3;
 $primary-color--light: #FDDCC4;
@@ -63,7 +87,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
     // display: inline-block;
     // width: 20.7rem;
     // height: 5.2rem;
-    margin: 0 auto;         // костыль?
+    margin: 0 auto;         
 
     padding: 1.5rem 4.5rem;
 
@@ -129,6 +153,7 @@ h2 {
     font-size: 4.4rem;
     line-height: 130%;
 }
+
 h3 {
     font-size: 3.5rem;
     line-height: 130%;
@@ -153,6 +178,14 @@ h5 {
     line-height: 160%;
     letter-spacing: 0.02rem;
 }
+@media (max-width: 1279px) and (min-width: 768px) {
+    .text--L {
+        letter-spacing: 0rem;
+    }
+}
+
+
+
 .text--S {
     font-size: 1.2rem;
     line-height: 150%;
@@ -198,6 +231,18 @@ h5 {
     padding-top: 6.2rem;
     margin-bottom: -21.6rem;
 }
+@media (min-width: 1280px) {}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .header {
+        padding-top: 3.2rem;
+    }
+}
+
+// @media (max-width: 767px) and (min-width: 320px) {}
+
+// @media (max-width: 319px) {}
+
 
 .header__logo {
     display: -webkit-box;
@@ -314,6 +359,59 @@ h5 {
 
     color: $color-disabled;
 }
+
+@media (min-width: 1280px) {
+
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .btn.w768 {
+        display: block;
+    }
+    .btn.w1280 {
+        display: none;
+    }
+
+    .start-screen {
+        & .wrapper {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        & .start-screen__text-block {
+            height: 36.1rem;
+            padding-top: 9rem;
+            padding-left: 4.2rem;
+            margin: unset;
+            align-self: center;
+        }
+
+        & .btn {
+            align-self: center;
+            margin-left: -0.1rem;       //PP pron
+        }
+    }
+    
+    .start-screen {
+        height: 124.5rem;
+        padding: 13.9rem 0rem 0rem;             // PP (было 14rem)
+    }
+    
+    
+    .start-screen__img {
+        width: 56.9rem;
+        height: 59.3rem;
+        margin-top: 10rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+}
+
+@media (max-width: 319px) {}
+
+
+
 @-moz-document url-prefix() {
     .start-screen__text {
         letter-spacing: 0.02rem;    // PP Mozilla
