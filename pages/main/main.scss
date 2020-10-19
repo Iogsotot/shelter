@@ -40,7 +40,10 @@ html {
     .wrapper {
         max-width: 708px;
     }
-    .about, .pets, .help, .donation, .footer {
+    // .about, .pets, .help, .donation, .footer {
+    //     display: none;
+    // }  
+    .pets, .help, .donation, .footer {
         display: none;
     }  
 }
@@ -472,6 +475,42 @@ h5 {
 .about__text:first-of-type {
     margin: 1rem 0rem 2.2rem;   //PP
 } 
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .about {
+        height: 104.8rem;
+        padding: 6.6rem 0 10rem;
+        
+        & .wrapper {
+            flex-direction: column-reverse;
+        }
+    } 
+
+    .about__text-block {
+        // height: 39.4rem;
+        height: unset;
+        margin: unset;
+        margin-bottom: 8rem;
+        justify-content: space-between;
+        align-self: center;
+    }
+    .about__title {
+        // margin-bottom: 1.1rem;
+        padding-top: 1.6rem;
+    }
+    .about__text:first-of-type {
+        margin: unset;
+        margin-top: 1.3rem
+    }
+    .about__text {
+        margin-top: 2.5rem;
+    }
+
+ 
+}
+
+
+
 /* ABOUT End */
 /* PETS Start */
 .pets {
