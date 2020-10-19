@@ -43,7 +43,7 @@ html {
     // .about, .pets, .help, .donation, .footer {
     //     display: none;
     // }  
-    .pets, .help, .donation, .footer {
+    .help, .donation, .footer {
         display: none;
     }  
 }
@@ -599,6 +599,30 @@ h5 {
 .arrow--right {
     margin-left: 5.3rem;;
 }
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .slider, .slides {
+        overflow-x: hidden;
+    }
+    .arrow--left {
+        margin-right: 1.3rem;
+    }
+    .arrow--right {
+        margin-left: 1.3rem;
+    }
+
+    .slide__title {
+      margin-bottom: 4.6rem;       //PP
+    }
+    .slide:first-of-type {
+        margin-right: 4rem;
+    }
+    .slide .img-box {
+        margin-left: -0.1rem;    //PP pron
+    }
+
+}
+
 /* PETS End */
 
 /* HELP Start */
