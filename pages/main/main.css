@@ -32,7 +32,7 @@ html {
   justify-content: space-between;
 }
 
-.burger__icon {
+.burger__icon, .control-panel {
   display: none;
 }
 
@@ -46,7 +46,7 @@ html {
   .wrapper {
     max-width: 300px;
   }
-  .pets, .help, .donation, .footer {
+  .help, .donation, .footer {
     display: none;
   }
 }
@@ -523,7 +523,8 @@ h5 {
 
 @media (max-width: 767px) {
   .about {
-    padding: 4.3rem 0 10rem;
+    height: 97.4rem;
+    padding: 4.3rem 0 0rem;
   }
   .about__text-block {
     padding: 0 1.45rem;
@@ -673,6 +674,49 @@ h5 {
   }
   .slide {
     margin: 5.8rem 0.05rem 5.95rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets {
+    height: 79.1rem;
+    padding: 4.3rem 0 0rem;
+  }
+  .pets .pets__title > span {
+    width: auto;
+    letter-spacing: 0.15rem;
+  }
+  .pets .slider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 4.1rem 0 4.2rem -1.1rem;
+    padding: 0;
+  }
+  .pets .slider .slide {
+    margin: 0 2rem 2rem;
+  }
+  .pets .slider .arrow--left, .pets .slider .arrow--right {
+    display: none;
+    margin: 0;
+  }
+  .pets .slider .control-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 18.3rem;
+    margin-left: 1.1rem;
+  }
+  .pets .slider .control-panel .arrow {
+    display: block;
   }
 }
 
