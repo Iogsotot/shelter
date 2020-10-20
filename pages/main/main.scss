@@ -50,7 +50,7 @@ html {
     .wrapper {
         max-width: 300px;
     }
-        .help, .donation, .footer {
+    .donation, .footer {
         display: none;
     }  
 }
@@ -849,6 +849,33 @@ h5 {
     }
 }
 
+@media (max-width: 767px) {
+    .help {
+        padding: 4.3rem 0 7rem;
+
+        & .help__title {
+            width: 26.5rem;
+            padding: 0;
+            margin: 0 0 3.7rem;
+            letter-spacing: 0.15rem;
+        }
+        .help__icons-rows .icon-block {
+            margin:  0.4rem 0rem 0;
+            height: 11.3rem;
+            width: 12.5rem;
+        }
+        .help__icon {
+            width: 5rem;
+            height: 5rem;
+            margin: 0 auto 2.1rem;
+        }
+        .icon__title {
+            font-size: 1.5rem;  
+            text-align: center;
+            letter-spacing: 0.09rem;  
+        }
+    }
+}
 /* HELP End */
 
 /* DONATION Start */
