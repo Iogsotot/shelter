@@ -211,6 +211,10 @@ h5 {
   color: #F1CDB3;
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 /* HEADER Start */
 .header {
   height: 13.6rem;
@@ -659,6 +663,82 @@ h5 {
 
 .arrow--right {
   margin-left: 5.3rem;
+}
+
+.popup {
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.popup .popup__content {
+  width: 90rem;
+  height: 50rem;
+  margin: 5.2rem auto 0;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.popup .popup__content .text-block {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 5.2rem 2rem 0rem 2.9rem;
+}
+
+.popup .popup__img {
+  display: block;
+  width: 50rem;
+  height: 50rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.popup .popup__title {
+  letter-spacing: 0.21rem;
+}
+
+.popup .popup__subtitle {
+  margin: 0.8rem 0rem 4.1rem 0rem;
+  letter-spacing: 0.12rem;
+}
+
+.popup .popup__text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 115%;
+  letter-spacing: 0.09rem;
+  text-align: left;
+  margin: 0rem 0rem 3.9rem 0rem;
+}
+
+.popup .popup__list {
+  font-size: 1.5rem;
+}
+
+.popup .popup__list li {
+  margin-left: 1.45rem;
+  margin-bottom: 0.9rem;
+}
+
+.popup .item__name {
+  font-weight: bold;
+  letter-spacing: 0.21rem;
+  margin-right: -0.1rem;
 }
 
 @media (max-width: 1279px) {

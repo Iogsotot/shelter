@@ -213,6 +213,10 @@ h5 {
   color: #F1CDB3;
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 /* HEADER Start */
 .header {
   position: -webkit-sticky;
