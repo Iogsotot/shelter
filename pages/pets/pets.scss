@@ -22,6 +22,9 @@ html {
     font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 10px;
 }
+body {
+    min-width: 300px;
+}
 
 .wrapper {
     display: -webkit-box;
