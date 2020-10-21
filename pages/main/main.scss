@@ -238,7 +238,10 @@ h5 {
     line-height: 115%;
     letter-spacing: 0.06rem;
     color: $primary-color;
+}
 
+.logo-link {
+    text-decoration: none;
 }
 // .links:active {
 // }
@@ -688,6 +691,83 @@ h5 {
 .arrow--right {
     margin-left: 5.3rem;;
 }
+
+.popup {
+    position:fixed;
+    top:0px;
+    z-index: 1;
+    width:100%;
+    min-height:100%;
+    
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    
+    .popup__content {
+        // z-index: ;
+        width: 90rem;
+        height: 50rem;
+        margin: 5.2rem auto 0;
+        // padding: 1rem;
+    
+        background-color: $color-medium;
+        border-radius: 1rem;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+        
+        display: flex;
+        flex-direction: row;
+        .text-block {
+            justify-content: flex-start;
+            margin: 5.2rem 2rem 0rem 2.9rem;
+        }
+    }
+    .popup__img {
+        display: block;
+        width: 50rem;
+        height: 50rem;
+        flex-shrink: 0;
+    }
+    .popup__title {
+        letter-spacing: 0.21rem;
+    }
+    .popup__subtitle {
+        margin: 0.8rem 0rem 4.1rem 0rem;
+        letter-spacing: 0.12rem;
+    }
+    .popup__text {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 115%;
+        letter-spacing: 0.09rem;
+        text-align: left;
+
+        margin: 0rem 0rem 3.9rem 0rem;
+    }
+    .popup__list {
+        font-size: 1.5rem;
+
+        li {
+            margin-left: 1.45rem;
+            margin-bottom: 0.9rem;
+        }
+    }
+    .age__item {
+    }
+    .item__name {
+        font-weight: bold;
+        letter-spacing: 0.21rem;
+        margin-right: -0.1rem;
+    }
+    .item__data {
+    }
+    .inoculation__item {
+    }
+    .diseases__item {
+    }
+    .parasites__item {
+    }
+}
+
 
 @media (max-width: 1279px) {
     .slider, .slides {
