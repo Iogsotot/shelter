@@ -21,6 +21,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  min-width: 300px;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,15 +274,19 @@ h5 {
 }
 
 .nav__item--active {
+  color: #545454;
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.nav__item:hover .nav__link, .nav__item .nav__link:hover {
   color: #292929;
-  border-bottom: 3px solid #f1cdb3;
 }
 
 .nav__link {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   line-height: 160%;
-  color: inherit;
+  color: #545454;
   text-decoration: none;
 }
 

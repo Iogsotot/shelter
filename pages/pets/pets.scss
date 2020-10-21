@@ -308,8 +308,11 @@ h5 {
     color:  $color-dark-title;
 
     &--active {
+        color: $color-dark-title;
+        border-bottom: 3px solid $primary-color;
+    }
+    &:hover .nav__link, .nav__link:hover {
         color: $color-dark;
-        border-bottom: 3px solid #f1cdb3;
     }
 }
 
@@ -317,7 +320,7 @@ h5 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     line-height: 160%;
-    color: inherit;
+    color: $color-dark-title;
     text-decoration: none;
 }
 @media (max-width: 1279px) {
@@ -364,7 +367,6 @@ h5 {
             letter-spacing: 0.103rem;     //PP
             
         }
-
     }
 
     & .slide .btn {
