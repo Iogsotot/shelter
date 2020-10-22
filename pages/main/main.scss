@@ -14,8 +14,8 @@
     -o-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    transition: all .2s;
 }
+
 html {
     font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 10px;
@@ -38,6 +38,7 @@ body {
 
 .burger__icon, .control-panel{
     display: none;
+    transition: all .2s;
 }
 
 // @media (min-width: 1280px) {                                //от 1280 и больше
@@ -153,10 +154,12 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
     font-weight: 400;
     font-style: normal;
     color: $color-dark-title;
+    transition: all .2s;
 }
 h2 {
     font-size: 4.4rem;
     line-height: 130%;
+    transition: all .2s;
 }
 @media (max-width: 767px) {
     h2 {
@@ -169,6 +172,7 @@ h3 {
     font-size: 3.5rem;
     line-height: 130%;
     letter-spacing: 0.06rem;
+    transition: all .2s;
 }
 @media (max-width: 767px) {
     h3 {
@@ -179,21 +183,25 @@ h3 {
 h4 {
     font-size: 2rem;
     line-height: 115%;
+    transition: all .2s;
 }
 h5 {
     font-size: 1.5rem;
     line-height: 110%;
+    transition: all .2s;
 }
 .text {
     font-family: Arial, 'Arial', Helvetica, Geneva, sans-serif;
     font-weight: 400;
     font-style: normal;
     color: $color-dark-text;
+    transition: all .2s;
 }
 .text--L {
     font-size: 1.5rem;
     line-height: 160%;
     letter-spacing: 0.02rem;
+    transition: all .2s;
 }
 @media (max-width: 767px) {
     .text--L { 
@@ -212,6 +220,7 @@ h5 {
     font-size: 1.2rem;
     line-height: 150%;
     color: $color-dark-note;
+    transition: all .2s;
 }
 
 @-moz-document url-prefix() { 
@@ -227,6 +236,7 @@ h5 {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    transition: all .2s;
 }
 
 // links
@@ -294,6 +304,7 @@ h5 {
 .header__nav {
     padding-top: 1.4rem;
     width: 44.3rem;
+    transition: all .2s;
 }
 
 .header__nav__list {
@@ -669,6 +680,7 @@ h5 {
 
     border: 0px solid transparent;
     border-radius: 0.9rem;
+    overflow: hidden;
     background-color: $color-medium;
     text-align: center;
 }
@@ -693,6 +705,7 @@ h5 {
 }
 
 .popup {
+    display: none;
     position:fixed;
     top:0px;
     z-index: 1;
@@ -703,11 +716,9 @@ h5 {
     overflow:hidden;
     
     .popup__content {
-        // z-index: ;
         width: 90rem;
         height: 50rem;
         margin: 5.2rem auto 0;
-        // padding: 1rem;
     
         background-color: $color-medium;
         border-radius: 1rem;
@@ -751,21 +762,21 @@ h5 {
             margin-bottom: 0.9rem;
         }
     }
-    .age__item {
-    }
+    // .age__item {
+    // }
     .item__name {
         font-weight: bold;
         letter-spacing: 0.21rem;
         margin-right: -0.1rem;
     }
-    .item__data {
-    }
-    .inoculation__item {
-    }
-    .diseases__item {
-    }
-    .parasites__item {
-    }
+    // .item__data {
+    // }
+    // .inoculation__item {
+    // }
+    // .diseases__item {
+    // }
+    // .parasites__item {
+    // }
 }
 
 
