@@ -12,8 +12,6 @@
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -webkit-transition: all .2s;
-  transition: all .2s;
 }
 
 html {
@@ -38,6 +36,8 @@ body {
 
 .burger__icon, .control-panel {
   display: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 @media (max-width: 1279px) {
@@ -111,11 +111,15 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #545454;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 h2 {
   font-size: 4.4rem;
   line-height: 130%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 @media (max-width: 767px) {
@@ -129,6 +133,8 @@ h3 {
   font-size: 3.5rem;
   line-height: 130%;
   letter-spacing: 0.06rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 @media (max-width: 767px) {
@@ -140,11 +146,15 @@ h3 {
 h4 {
   font-size: 2rem;
   line-height: 115%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 h5 {
   font-size: 1.5rem;
   line-height: 110%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .text {
@@ -152,12 +162,16 @@ h5 {
   font-weight: 400;
   font-style: normal;
   color: #4c4c4c;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .text--L {
   font-size: 1.5rem;
   line-height: 160%;
   letter-spacing: 0.02rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 @media (max-width: 767px) {
@@ -177,6 +191,8 @@ h5 {
   font-size: 1.2rem;
   line-height: 150%;
   color: #b2b2b2;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 @-moz-document url-prefix() {
@@ -200,6 +216,8 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .link {
@@ -251,6 +269,8 @@ h5 {
 .header__nav {
   padding-top: 1.4rem;
   width: 44.3rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .header__nav__list {
@@ -639,6 +659,7 @@ h5 {
   margin: 5.8rem 0.1rem 5.95rem;
   border: 0px solid transparent;
   border-radius: 0.9rem;
+  overflow: hidden;
   background-color: #fafafa;
   text-align: center;
 }
@@ -666,6 +687,7 @@ h5 {
 }
 
 .popup {
+  display: none;
   position: fixed;
   top: 0px;
   z-index: 1;
