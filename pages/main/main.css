@@ -529,7 +529,7 @@ h5 {
   }
   .about__text-block {
     height: unset;
-    margin: unset;
+    margin: 0;
     margin-bottom: 8rem;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -542,7 +542,7 @@ h5 {
     padding-top: 1.6rem;
   }
   .about__text:first-of-type {
-    margin: unset;
+    margin: 0;
     margin-top: 1.3rem;
   }
   .about__text {
@@ -656,12 +656,14 @@ h5 {
 .slide {
   height: 43.5rem;
   width: 27rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin: 5.8rem 0.1rem 5.95rem;
   border: 0px solid transparent;
   border-radius: 0.9rem;
-  overflow: hidden;
   background-color: #fafafa;
   text-align: center;
+  overflow: hidden;
 }
 
 .img-box {
@@ -1071,8 +1073,8 @@ h5 {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin: unset;
-    padding: unset;
+    margin: 0;
+    padding: 0;
   }
   .donation .donation__img {
     margin-top: 6rem;
@@ -1237,7 +1239,7 @@ h5 {
 
 @media (max-width: 1279px) {
   .footer {
-    height: unset;
+    height: auto;
     padding-top: 1.4rem;
   }
   .footer .wrapper {
@@ -1250,7 +1252,7 @@ h5 {
   }
   .footer .footer-center, .footer .footer-left, .footer .footer-right {
     margin: 0 auto;
-    padding: unset;
+    padding: 0;
   }
   .footer .footer-left {
     width: 27rem;
@@ -1259,16 +1261,16 @@ h5 {
     width: 30rem;
   }
   .footer .footer-center .contact:first-of-type {
-    margin-bottom: unset;
+    margin-bottom: 0;
   }
   .footer .footer-center .footer__title {
-    margin-right: unset;
-    margin-left: unset;
+    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 0.5rem;
     vertical-align: middle;
   }
   .footer .footer__icon--pin {
-    margin: unset;
+    margin: 0;
     margin-right: 1.2rem;
     margin-left: -0.5rem;
   }
