@@ -44,7 +44,7 @@ body {
 // @media (min-width: 1280px) {                                //от 1280 и больше
 // }
 
-@media (max-width: 1279px) {         //от 768 до 1279
+@media (max-width: 1279px) {                                    //от 768 до 1279
     .wrapper {
         max-width: 708px;
     }
@@ -266,11 +266,8 @@ h5 {
 // }
 
 /* HEADER Start */
-
 .header {
     height: 13.6rem;
-    // padding-top: 7.6rem;
-    // padding-top: 6.23rem;
     padding-top: 6.2rem;
     margin-bottom: -21.6rem;
 }
@@ -368,7 +365,6 @@ h5 {
 }
 
 // @media (max-width: 319px) {}
-
 /* HEADER End */
 
 /* START-SCREEN Start */
@@ -411,8 +407,6 @@ h5 {
 }
 
 .start-screen__text {
-    // height: 7.3rem;
-    // margin: 4.2rem 4.2rem 4.2rem 0rem;
     height: 8.5rem;                         // del
     width: 46rem;                          
     margin: 4.25rem 4.2rem 2.7rem 0rem;     //del
@@ -420,11 +414,9 @@ h5 {
 
     color: $color-disabled;
 }
-
 @-moz-document url-prefix() {
     .start-screen__text {
         letter-spacing: 0.02rem;    // PP Mozilla
-
     }
 }
 
@@ -541,8 +533,7 @@ h5 {
     letter-spacing: 0rem;        // PP Chrome
     
 }
-@-moz-document url-prefix()
-{
+@-moz-document url-prefix() {
     .about__text {
         letter-spacing: 0.02rem;    // PP Mozilla
     }
@@ -565,7 +556,7 @@ h5 {
     .about__text-block {
         // height: 39.4rem;
         height: unset;
-        margin: unset;
+        margin: 0;
         margin-bottom: 8rem;
         justify-content: space-between;
         align-self: center;
@@ -575,7 +566,7 @@ h5 {
         padding-top: 1.6rem;
     }
     .about__text:first-of-type {
-        margin: unset;
+        margin: 0;
         margin-top: 1.3rem
     }
     .about__text {
@@ -616,6 +607,7 @@ h5 {
     }
 }
 /* ABOUT End */
+
 /* PETS Start */
 .pets {
     height: 87.7rem;
@@ -674,15 +666,15 @@ h5 {
 .slide {
     height: 43.5rem;
     width: 27rem;
-
+    flex-shrink: 0;
     // margin: 5.8rem 0.8rem;
     margin: 5.8rem 0.1rem 5.95rem;   //PP
 
     border: 0px solid transparent;
     border-radius: 0.9rem;
-    overflow: hidden;
     background-color: $color-medium;
     text-align: center;
+    overflow: hidden;
 }
 
 .img-box {
@@ -841,7 +833,6 @@ h5 {
         }
     }
 }
-
 /* PETS End */
 
 /* HELP Start */
@@ -883,10 +874,10 @@ h5 {
 
 .icon-block:nth-of-type(2) {    //PP
     margin-right: 6.8rem;       //PP
-    margin-left: 7rem;        //PP
+    margin-left: 7rem;           //PP
 }
 .icon-block:nth-of-type(4) {    //PP
-    margin-right: 7rem;       //PP
+    margin-right: 7rem;         //PP
     margin-left: 6.9rem;        //PP
 }
 .icon-block:nth-of-type(6) {    //PP
@@ -979,9 +970,9 @@ h5 {
     background-color: $primary-color--medium;
     padding: 8.3rem 0 10rem;            // PP edit
     & .wrapper {
-    justify-content: center;
-    align-items: flex-start;
-    // align-self: start;
+        justify-content: center;
+        align-items: flex-start;
+        // align-self: start;
     }
 }
 
@@ -1060,8 +1051,8 @@ h5 {
 
         & .donation__img, & .donation__text-block {
             align-self: center;
-            margin: unset;
-            padding: unset;
+            margin: 0;
+            padding: 0;
         }
 
         & .donation__img {
@@ -1126,6 +1117,7 @@ h5 {
     }
 }
 /* DONATION End */
+
 /* FOOTER Start */
 .footer {
     background: $gradient-bg--footer;
@@ -1160,7 +1152,6 @@ h5 {
 .footer-center {
     align-items: flex-start;
     height: 25.3rem;
-    // margin-left: -0.3rem;             //PP
     & .contact:first-of-type {
         margin-bottom: -0.5rem;         //PP
     }
@@ -1171,7 +1162,7 @@ h5 {
 }
 
 .footer-right {
-    margin-right: -0.1rem;      //PP
+    margin-right: -0.1rem;               //PP
     & .footer__img {
         vertical-align: bottom;
     }
@@ -1211,7 +1202,7 @@ h5 {
 
 @media (max-width: 1279px) {
     .footer{
-        height: unset;
+        height: auto;
         padding-top: 1.4rem;
 
         & .wrapper {
@@ -1223,7 +1214,7 @@ h5 {
 
         .footer-center, .footer-left, .footer-right {
             margin: 0 auto;
-            padding: unset;
+            padding: 0;
         }
         .footer-left {
             width: 27rem;
@@ -1234,16 +1225,16 @@ h5 {
 
 
         .footer-center .contact:first-of-type {
-            margin-bottom: unset;         //PP
+            margin-bottom: 0;         //PP
         }
         .footer-center .footer__title {
-            margin-right: unset;
-            margin-left: unset;
+            margin-right: 0;
+            margin-left: 0;
             margin-bottom: 0.5rem;
             vertical-align: middle;             //PP I know that it's very bad
         }
         .footer__icon--pin {
-            margin: unset;
+            margin: 0;
             margin-right: 1.2rem;
             margin-left: -0.5rem;
         }
