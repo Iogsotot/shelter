@@ -101,14 +101,14 @@ function isVisible(elem) {
 }
 
 getData().then((data) => {
-  petsData = data;
-  createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))
-  let slideElements = document.querySelectorAll('.slide');
-  slideElements.forEach(slide => {
-    slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
-  });
-  sliderArrows.forEach(arrow => {
-    arrow.addEventListener("click", function(){createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))})
-  });
-}
+    petsData = data;
+    createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))
+    let slideElements = document.querySelectorAll('.slide');
+    slideElements.forEach(slide => {
+      slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
+    });
+    sliderArrows.forEach(arrow => {
+      arrow.addEventListener("click", function(){createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))})
+    });
+  }
 );
