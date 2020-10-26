@@ -2,6 +2,7 @@
 // let fullPetsList = [];
 let popup = document.querySelector('.popup');
 let slides = document.querySelectorAll('.slide');
+let body = document.querySelector('body');
 // let title = document.querySelector('.');
 // let subtitle = document.querySelector('.');
 // let text = document.querySelector('.');

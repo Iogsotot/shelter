@@ -22,7 +22,10 @@ html {
 }
 
 body {
+  position: relative;
   min-width: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .extra-wrapper {
@@ -696,6 +699,10 @@ h5 {
 
 .slide:hover {
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 .slide__title {

@@ -764,6 +764,10 @@ h5 {
 
 .slide:hover {
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 .slide__title {
@@ -1195,6 +1199,7 @@ h5 {
 }
 
 .wallet {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1214,6 +1219,10 @@ h5 {
   width: 34.9rem;
   height: 4.3rem;
   padding: 1rem 1.4rem 1rem 1.3rem;
+}
+
+.wallet:hover {
+  background-color: #FDDCC4;
 }
 
 .wallet__icon {
