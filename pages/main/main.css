@@ -1555,4 +1555,11 @@ h5 {
   -webkit-transition: all 250ms linear;
   transition: all 250ms linear;
 }
+
+.hide--popup {
+  opacity: 0 !important;
+  z-index: -1;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
 /*# sourceMappingURL=main.css.map */

@@ -16,12 +16,12 @@ let cancelBtn = document.querySelector('.cancel__btn');
 function showPopup () {
     // onClickClose(popup)
     popup.style.zIndex = '1';
-    popup.classList.remove('hide');
+    popup.classList.remove('hide--popup');
     // console.log('я тоже работаю');
 }
  
 function hidePopup () {
-    popup.classList.add('hide');
+    popup.classList.add('hide--popup');
     setTimeout( () => {popup.style.zIndex = '-100'}, 250);          //даём время анимации
     // console.log('я работаю');
 }

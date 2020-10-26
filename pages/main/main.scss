@@ -1581,6 +1581,11 @@ h5 {
     transition: all 250ms linear;
 }
 
+.hide--popup {
+    opacity: 0 !important;              //чтобы не опасаться, что нижние стили перебьют
+    z-index: -1;
+    transition: all 250ms linear;
+}
 
 /*# sourceMappingURL=main.css.map */
 
