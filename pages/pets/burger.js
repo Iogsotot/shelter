@@ -5,7 +5,7 @@ let headerLogo = document.querySelector('.header__logo');
 let burgerLogo = document.querySelector('.burger__logo .logo');
 let body = document.querySelector('body');
 let overlay = document.querySelector('.overlay');
-let aboutLink = document.getElementById('about');
+let petsLink = document.getElementById('pets');
 
 function slide() {
     // console.log('дратути');
@@ -20,4 +20,4 @@ function slide() {
 // Listeners
 burgerBtnOpen.addEventListener('click', slide);
 burgerBtnClose.addEventListener('click', slide);
-aboutLink.addEventListener('click', slide);
+petsLink.addEventListener('click', slide);

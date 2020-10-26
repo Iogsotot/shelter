@@ -1,5 +1,6 @@
 let popup = document.querySelector('.popup');
 let slidersBtns = document.querySelectorAll('.slide-btn');
+// let body = document.querySelector('body');
 
 async function getData() {
   return fetch('./../../assets/pets.json')
@@ -73,6 +74,7 @@ function openPopup(event, petName) {
   let popupContent = document.querySelector('.popup__content');
   popup.style.zIndex = '1';
   popup.classList.remove('hide--popup');
+  document.body.classList.add('no-scrolling');
   // handlers to close popup
   let cancelBtn = document.querySelector('.cancel__btn');
   cancelBtn.addEventListener('click', hidePopup)
@@ -81,6 +83,7 @@ function openPopup(event, petName) {
 
 function hidePopup() {
   popup.classList.add('hide--popup');
+  document.body.classList.remove('no-scrolling');
   setTimeout(() => { popup.style.zIndex = '-100' }, 250);          //даём время анимации
 }
 
