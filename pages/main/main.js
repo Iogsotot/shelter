@@ -1,24 +1,26 @@
+let popup = document.querySelector('.popup');
+
 async function getData() {
-  return fetch('./pets.json')
-    .then((response) => {
-      return response.json()
-    })
-    .then((jsonResponse) => {
-      return jsonResponse
-    })
+  return fetch('./../../assets/pets.json')
+  .then((response) => {
+    return response.json()
+  })
+  .then((jsonResponse) => {
+    return jsonResponse
+  })
 }
 
 const createSlide = function createSlide(pet) {
   const slideTemplate = `
   <div class="slide">
-    <div class="img-box">
-        <img 
-            src="${pet.img}" 
-            alt="${pet.name}"
-        >
-    </div>
-    <h4 class="title slide__title">${pet.name}</h4>
-    <button class="btn btn--ghost" onclick="openPopup('${pet.name}')">Learn more</button>
+  <div class="img-box">
+  <img 
+  src="${pet.img}" 
+  alt="${pet.name}"
+  >
+  </div>
+  <h4 class="title slide__title">${pet.name}</h4>
+  <a href="#/" class="btn btn--ghost">Learn more</a>
   </div>`
   return slideTemplate;
 }
@@ -35,54 +37,29 @@ function createSlides(slides) {
 const createPopup = function createPopup(pet) {
   const popupTemplate = `
   <div class="popup__content">
-    <img 
-        class="popup__img"
-        src="${pet.img}" alt="${pet.name}">
-    <div class="text-block">
-        <h3 class="popup__title">
-          ${pet.name}
-        </h3>
-        <h4 class="popup__subtitle">
-          ${pet.type} - ${pet.breed}
-        </h4>
-        <p class="text popup__text">
-          ${pet.description}
-        </p>
-        <ul class="popup__list">
-            <li class="age__item">
-                <span class="item__name">
-                    Age: 
-                </span>
-                <span class="item__data">
-                  ${pet.age}
-                </span>
-            </li>
-            <li class="inoculation__item">
-                <span class="item__name">
-                    Inoculations: 
-                </span>
-                <span class="item__data">
-                  ${pet.inoculations}
-                </span>
-            </li>
-            <li class="diseases__item">
-                <span class="item__name">
-                    Diseases: 
-                </span>
-                <span class="item__data">
-                  ${pet.diseases}
-                </span>
-            </li>
-            <li class="parasites__item">
-                <span class="item__name">
-                    Parasites: 
-                </span>
-                <span class="item__data">
-                  ${pet.parasites}
-                </span>
-            </li>
-        </ul>
-    </div>
+  <button class="cancel__btn btn btn--ghost"></button>
+  <img 
+  class="popup__img"
+  src="${pet.img}" alt="${pet.name}">
+  <div class="text-block">
+  <h3 class="popup__title">${pet.name}</h3>
+  <h4 class="popup__subtitle">${pet.type} - ${pet.breed}</h4>
+  <div class="popup__text">${pet.description}</div>
+  <ul class="popup__list">
+  <li class="popup__item">
+  <span class="item__name">Age:</span><span class="age"> ${pet.age}</span>
+  </li>
+  <li class="popup__item">
+  <span class="item__name">Inoculations:</span><span class="inoculations"> ${pet.inoculations}</span>
+  </li>
+  <li class="popup__item">
+  <span class="item__name">Diseases:</span><span class="diseases"> ${pet.diseases}</span>
+  </li>
+  <li class="popup__item">
+  <span class="item__name">Parasites:</span><span class="parasites"> ${pet.parasites}</span>
+  </li>
+  </ul>
+  </div>
   </div>
   `
   return popupTemplate;
@@ -90,20 +67,44 @@ const createPopup = function createPopup(pet) {
 
 let petsData;
 
+function openPopup(event, petName) {
+  popup.innerHTML = createPopup(petsData.find(pet => pet.name === petName))
+  let popupContent = document.querySelector('.popup__content');
+  popup.style.zIndex = '1';
+  popup.classList.remove('hide--popup');
+  // handlers to close popup
+  let cancelBtn = document.querySelector('.cancel__btn');
+  cancelBtn.addEventListener('click', hidePopup)
+  onClickClose(popupContent, event)
+}
+
+function hidePopup() {
+  popup.classList.add('hide--popup');
+  setTimeout(() => { popup.style.zIndex = '-100' }, 250);          //даём время анимации
+}
+
+function onClickClose(elem, firstClickEvent) {            // вызвать в момент показа окна, где elem - окно
+  function outsideClickListener(event) {
+    if (event.target != firstClickEvent.target) {
+      if (!elem.contains(event.target) && isVisible(elem)) {            // проверяем, что клик не по элементу
+        hidePopup();
+        document.removeEventListener('click', outsideClickListener);
+      }
+    }
+  }
+  document.addEventListener('click', outsideClickListener)
+}
+
+function isVisible(elem) {
+  return !!elem && !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length);
+}
+
 getData().then((data) => {
   petsData = data;
-  createSlides(data.sort(() => .5 - Math.random()).slice(0,3))
+  createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))
+  let slideElements = document.querySelectorAll('.slide');
+  slideElements.forEach(slide => {
+    slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
+  });
 }
 );
-
-function openPopup(petName) {
-  let el = document.querySelector('.popup');
-  el.innerHTML = createPopup(petsData.find(pet => pet.name === petName))
-  el.style.display = 'block';
-}
-
-function closePopup() {
-  let el = document.querySelector('.popup');
-  el.innerHTML = ""
-  el.style.display = 'none';
-}
