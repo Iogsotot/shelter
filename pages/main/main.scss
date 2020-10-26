@@ -48,13 +48,6 @@ body {
     // overflow-x: hidden;  
 }
 
-.hide {
-    opacity: 0 !important;              //чтобы не опасаться, что нижние стили перебьют
-    height: 0;
-    width: 0;
-    transition: all 250ms linear;
-}
-
 .burger__icon, .control-panel{
     display: none;
     transition: all .2s;
@@ -440,16 +433,7 @@ h5 {
     }
 }
 
-//animation
-.slide-out {
-    transform: translateX(-100%);
-    transition: all 250ms linear;
-}
-.fly--right {
-    transform: translateX(100%);
-    opacity: 0;
-    transition: all 250ms linear;
-}
+
 
 // @media (max-width: 319px) {}
 /* HEADER End */
@@ -1401,6 +1385,42 @@ h5 {
 
 }
 /* FOOTER End */
+
+//animation and classes for JS
+.slide-out {
+    transform: translateX(-100%);
+    transition: all 250ms linear;
+}
+.fly--right {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 250ms linear;
+}
+
+.no-scrolling {
+    overflow: hidden;
+    position: sticky;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 32rem;
+    height: 200rem;
+    width: 100rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 4;
+    transition: opacity 250ms linear;
+}
+
+.hide {
+    opacity: 0 !important;              //чтобы не опасаться, что нижние стили перебьют
+    height: 0;  
+    width: 0;  
+    z-index: -1;
+    transition: all 250ms linear;
+}
+
 
 /*# sourceMappingURL=main.css.map */
 

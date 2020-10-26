@@ -22,14 +22,13 @@ function showPopup () {
  
 function hidePopup () {
     popup.classList.add('hide');
-    // popup.style.zIndex = '-100';
     setTimeout( () => {popup.style.zIndex = '-100'}, 250);          //даём время анимации
     // console.log('я работаю');
 }
 
-function onClickClose(elem) {                             // вызвать в момент показа окна, где elem - окно
+function onClickClose(elem) {                                        // вызвать в момент показа окна, где elem - окно
     function outsideClickListener(event) {
-        if (!elem.contains(event.target)) {             // проверяем, что клик не по элементу
+        if (!elem.contains(event.target)) {                         // проверяем, что клик не по элементу
             hidePopup();
             document.removeEventListener('click', outsideClickListener);
         }               
