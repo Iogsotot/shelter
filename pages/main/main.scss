@@ -697,7 +697,7 @@ h5 {
 }
 
 .popup {
-    display: none;
+    // display: none;
     position:fixed;
     top:0px;
     z-index: 1;
@@ -750,8 +750,12 @@ h5 {
         font-size: 1.5rem;
 
         li {
+            color: $primary-color;
             margin-left: 1.45rem;
             margin-bottom: 0.9rem;
+        span {
+            color: #000000;
+        }
         }
     }
     // .age__item {

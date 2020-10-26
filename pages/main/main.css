@@ -689,7 +689,6 @@ h5 {
 }
 
 .popup {
-  display: none;
   position: fixed;
   top: 0px;
   z-index: 1;
@@ -755,8 +754,13 @@ h5 {
 }
 
 .popup .popup__list li {
+  color: #F1CDB3;
   margin-left: 1.45rem;
   margin-bottom: 0.9rem;
+}
+
+.popup .popup__list li span {
+  color: #000000;
 }
 
 .popup .item__name {
