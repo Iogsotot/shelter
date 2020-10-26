@@ -12,6 +12,8 @@
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 html {
@@ -32,6 +34,12 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.hide {
+  opacity: 0 !important;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 .burger__icon, .control-panel {
@@ -688,20 +696,6 @@ h5 {
   margin-left: 5.3rem;
 }
 
-.popup__content::after {
-  position: absolute;
-  top: -5.2rem;
-  right: -4.2rem;
-  content: url(../../assets/icons/cancel.png);
-  border: 2px solid #F1CDB3;
-  border-radius: 10rem;
-  /* width: 2.5rem; */
-  /* height: 2.5rem; */
-  padding: 1.65rem 1.8rem;
-  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
 .popup {
   position: fixed;
   top: 0px;
@@ -710,17 +704,19 @@ h5 {
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
 }
 
 .popup .popup__content {
   position: relative;
   width: 90rem;
   height: 50rem;
-  margin: 5.2rem auto 0;
+  margin: 18.8rem auto 0;
   background-color: #fafafa;
   border-radius: 1rem;
-  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.25), 0 5px 15px rgba(13, 13, 13, 0.25);
-          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.25), 0 5px 15px rgba(13, 13, 13, 0.25);
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.25), 0px 5px 12px rgba(13, 13, 13, 0.5);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.25), 0px 5px 12px rgba(13, 13, 13, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -735,6 +731,25 @@ h5 {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 5.2rem 2rem 0rem 3rem;
+}
+
+.popup .popup__content .cancel__btn {
+  position: absolute;
+  top: -5.2rem;
+  right: -4.2rem;
+  background-image: url(../../assets/icons/cancel.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #F1CDB3;
+  border-radius: 10rem;
+  /* width: 2.5rem; */
+  /* height: 2.5rem; */
+  height: auto;
+  width: auto;
+  padding: 2.4rem;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .popup .popup__img {

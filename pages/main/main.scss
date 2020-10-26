@@ -14,6 +14,7 @@
     -o-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    transition: all 250ms linear;
 }
 
 html {
@@ -34,6 +35,12 @@ body {
     -ms-flex-pack: justify;
     // justify-content: center;
     justify-content: space-between;
+}
+
+.hide {
+    opacity: 0 !important;              //чтобы не опасаться, что нижние стили перебьют
+    // z-index: -100 !important;
+    transition: all 250ms linear;
 }
 
 .burger__icon, .control-panel{
@@ -696,18 +703,6 @@ h5 {
     margin-left: 5.3rem;;
 }
 
-.popup__content::after {
-    position: absolute;
-    top: -5.2rem;
-    right: -4.2rem;
-    content: url(../../assets/icons/cancel.png);
-    border: 2px solid #F1CDB3;
-    border-radius: 10rem;
-    /* width: 2.5rem; */
-    /* height: 2.5rem; */
-    padding: 1.65rem 1.8rem;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-}
 .popup {
     // display: none;
     position:fixed;
@@ -718,23 +713,43 @@ h5 {
     
     background-color: rgba(0,0,0,0.5);
     overflow:hidden;
-    
+    transition: opacity 250ms linear;
+
     .popup__content {
         position: relative;
         width: 90rem;
         height: 50rem;
-        margin: 5.2rem auto 0;
+        margin: 18.8rem auto 0;
     
         background-color: $color-medium;
         border-radius: 1rem;
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.25), 
-                    0px 5px 12px rgba(13, 13, 13, 0.5)
+                    0px 5px 12px rgba(13, 13, 13, 0.5);
         
         display: flex;
         flex-direction: row;
+        
         .text-block {
             justify-content: flex-start;
             margin: 5.2rem 2rem 0rem 3rem;
+        }
+
+        .cancel__btn {
+            position: absolute;
+            top: -5.2rem;
+            right: -4.2rem;
+            background-image: url(../../assets/icons/cancel.png);
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 2px solid #F1CDB3;
+            border-radius: 10rem;
+            /* width: 2.5rem; */
+            /* height: 2.5rem; */
+            height: auto;
+            width: auto;
+            padding: 2.4rem;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
         }
     }
     .popup__img {
@@ -767,26 +782,20 @@ h5 {
             color: $primary-color;
             margin-left: 1.45rem;
             margin-bottom: 0.9rem;
-        span {
+           
+            span {
             color: #000000;
-        }
+            }
         }
     }
-    // .age__item {
-    // }
+    
     .item__name {
         font-weight: bold;
         letter-spacing: 0.21rem;
         margin-right: -0.1rem;
     }
-    // .item__data {
-    // }
-    // .inoculation__item {
-    // }
-    // .diseases__item {
-    // }
-    // .parasites__item {
-    // }
+
+
 }
 
 
