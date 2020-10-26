@@ -1,5 +1,5 @@
 let popup = document.querySelector('.popup');
-let sliderArrows = document.querySelectorAll('.arrow');
+let slidersBtns = document.querySelectorAll('.slide-btn');
 
 async function getData() {
   return fetch('./../../assets/pets.json')
@@ -107,8 +107,8 @@ getData().then((data) => {
     slideElements.forEach(slide => {
       slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
     });
-    sliderArrows.forEach(arrow => {
-      arrow.addEventListener("click", function(){createSlides(data.sort(() => .5 - Math.random()).slice(0, 8))})
+    slidersBtns.forEach(sliderBtn => {
+      sliderBtn.addEventListener("click", function(){createSlides(data.sort(() => .5 - Math.random()).slice(0, 8))})
     });
   }
 );
