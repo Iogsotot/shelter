@@ -537,6 +537,7 @@ h5 {
 
 .popup .popup__list {
   font-size: 1.5rem;
+  overflow: scroll;
 }
 
 .popup .popup__list li {

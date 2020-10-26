@@ -835,6 +835,13 @@ h5 {
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.popup .popup__content .cancel__btn:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
 .popup .popup__img {
   display: block;
   width: 50rem;
@@ -864,6 +871,7 @@ h5 {
 
 .popup .popup__list {
   font-size: 1.5rem;
+  overflow: scroll;
 }
 
 .popup .popup__list li {

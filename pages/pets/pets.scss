@@ -516,6 +516,7 @@ h5 {
     }
     .popup__list {
         font-size: 1.5rem;
+        overflow: scroll;
 
         li {
             color: $primary-color;

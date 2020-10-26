@@ -819,6 +819,11 @@ h5 {
             padding: 2.4rem;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
         }
+        .cancel__btn:hover {
+            background-color: $primary-color--light;
+            border-color: $primary-color--light;
+            transition: all 250ms linear;
+        }
     }
     .popup__img {
         display: block;
@@ -845,6 +850,7 @@ h5 {
     }
     .popup__list {
         font-size: 1.5rem;
+        overflow: scroll;
 
         li {
             color: $primary-color;
