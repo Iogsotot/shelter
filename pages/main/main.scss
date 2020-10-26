@@ -27,6 +27,9 @@ body {
     overflow-y: scroll;         //
     overflow-x: hidden;         //защита от горизонтального скролла - проверить
 }
+// main {
+//     position: relative;
+// }
 
 .extra-wrapper {
     position: relative;
@@ -367,11 +370,9 @@ h5 {
         justify-content: space-between;
     }
     .header__nav {
-        // position: relative;
         width: auto;
         padding-top: 1rem;
         padding-right: 4.3rem;
-        // overflow: hidden;
     }
     .burger__icon {
         display: inline-block;
@@ -770,6 +771,7 @@ h5 {
 .popup {
     // display: none;
     position:fixed;
+    // position:sticky;
     top:0px;
     z-index: 1;
     width:100%;
@@ -886,6 +888,96 @@ h5 {
     .slide {
         margin: 5.8rem 0.05rem 5.95rem;   //PP
     }
+
+    .popup {
+        position:fixed;
+        top:0px;
+        z-index: 1;
+        width:100%;
+        min-height:100%;
+
+        .popup__content {
+            width: 63rem;
+            height: 35rem;
+            margin-top: 26.3rem;
+            // margin: 18.8rem auto 0;
+        
+            // background-color: $color-medium;
+            // border-radius: 1rem;
+            // box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.25), 
+            //             0px 5px 12px rgba(13, 13, 13, 0.5);
+            
+            // display: flex;
+            // flex-direction: row;
+            
+            .text-block {
+                margin: 0;
+                padding: 1.1rem 1rem 1rem 1.1rem;
+            }
+    
+            // .cancel__btn {
+            //     position: absolute;
+            //     top: -5.2rem;
+            //     right: -4.2rem;
+            //     background-image: url(../../assets/icons/cancel.png);
+            //     background-color: transparent;
+            //     background-repeat: no-repeat;
+            //     background-position: center;
+            //     border: 2px solid #F1CDB3;
+            //     border-radius: 10rem;
+            //     /* width: 2.5rem; */
+            //     /* height: 2.5rem; */
+            //     height: auto;
+            //     width: auto;
+            //     padding: 2.4rem;
+            //     box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+            // }
+        }
+        .popup__img {
+            width: 35rem;
+            height: 35rem;
+        }
+        .popup__title, .popup__subtitle {
+            margin: 0;
+            padding: 0;
+        }
+        .popup__title {
+            font-size: 3.5rem;
+            letter-spacing: 0.13rem;
+            margin-bottom: 0.8rem;
+        }
+        .popup__subtitle {
+            margin: 0rem 0rem 2.25rem 0rem;
+            letter-spacing: 0.08rem;
+        }
+        .popup__text {
+            font-size: 1.3rem;
+
+            // font-weight: 400;
+            line-height: 100%;
+            // letter-spacing: 0.09rem;
+            // text-align: left;
+    
+            margin: 0rem 0rem 2.5rem 0rem;
+        }
+        .popup__list {
+            // font-size: 1.5rem;
+    
+            li {
+                // color: $primary-color;
+                margin-left: 1.45rem;
+                margin-bottom: 0.4rem;
+            }
+        }
+        
+        // .item__name {
+        //     font-weight: bold;
+        //     letter-spacing: 0.21rem;
+        //     margin-right: -0.1rem;
+        // }
+    }
+    
+
 }
 
 @media (max-width: 767px) {
@@ -923,6 +1015,74 @@ h5 {
             }
         }
     }
+
+  
+    .popup {
+
+        .popup__content {
+            width: 24rem;
+            height: 34.1rem;
+            margin-top: 26.3rem;
+            // margin: 18.8rem auto 0;
+            
+        //     .text-block {
+        //         margin: 0;
+        //         padding: 1.1rem 1rem 1rem 1.1rem;
+        //     }
+    
+            // .cancel__btn {
+            //     position: absolute;
+            //     top: -5.2rem;
+            //     right: -4.2rem;
+            //     background-image: url(../../assets/icons/cancel.png);
+            //     background-color: transparent;
+            //     background-repeat: no-repeat;
+            //     background-position: center;
+            //     border: 2px solid #F1CDB3;
+            //     border-radius: 10rem;
+            //     /* width: 2.5rem; */
+            //     /* height: 2.5rem; */
+            //     height: auto;
+            //     width: auto;
+            //     padding: 2.4rem;
+            //     box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+            // }
+        }
+        .popup__img {
+            display: none;
+        }
+        .popup__title, .popup__subtitle {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .popup__title {
+            letter-spacing: 0.13rem;
+            margin-bottom: 0.8rem;
+        }
+        .popup__subtitle {
+            margin: 0rem 0rem 2.25rem 0rem;
+            letter-spacing: 0.08rem;
+        }
+        .popup__text {   
+            margin: 0rem 0rem 3rem 0rem;
+        }
+        // .popup__list {
+        //     // font-size: 1.5rem;
+    
+        //     li {
+        //         // color: $primary-color;
+        //         margin-left: 1.45rem;
+        //         margin-bottom: 0.4rem;
+        //     }
+        
+        
+        // .item__name {
+        //     font-weight: bold;
+        //     letter-spacing: 0.21rem;
+        //     margin-right: -0.1rem;
+        // }
+    }  
 }
 /* PETS End */
 
@@ -1407,7 +1567,7 @@ h5 {
     top: 0;
     right: 32rem;
     height: 200rem;
-    width: 100rem;
+    width: 250rem;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 4;
     transition: opacity 250ms linear;

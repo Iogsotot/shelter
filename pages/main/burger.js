@@ -5,6 +5,7 @@ let headerLogo = document.querySelector('.header__logo');
 let burgerLogo = document.querySelector('.burger__logo .logo');
 let body = document.querySelector('body');
 let overlay = document.querySelector('.overlay');
+let aboutLink = document.getElementById('about');
 
 function slide() {
     // console.log('дратути');
@@ -14,10 +15,11 @@ function slide() {
     body.classList.toggle('no-scrolling');
     overlay.classList.toggle('hide');
 }
-
+// прописать активацию всем hide при изменении ширины экрана с открытым бургером
 
 // Listeners
 burgerBtnOpen.addEventListener('click', slide);
 burgerBtnClose.addEventListener('click', slide);
+aboutLink.addEventListener('click', slide);
 
 

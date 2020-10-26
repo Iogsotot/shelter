@@ -897,6 +897,48 @@ h5 {
   .slide {
     margin: 5.8rem 0.05rem 5.95rem;
   }
+  .popup {
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    min-height: 100%;
+  }
+  .popup .popup__content {
+    width: 63rem;
+    height: 35rem;
+    margin-top: 26.3rem;
+  }
+  .popup .popup__content .text-block {
+    margin: 0;
+    padding: 1.1rem 1rem 1rem 1.1rem;
+  }
+  .popup .popup__img {
+    width: 35rem;
+    height: 35rem;
+  }
+  .popup .popup__title, .popup .popup__subtitle {
+    margin: 0;
+    padding: 0;
+  }
+  .popup .popup__title {
+    font-size: 3.5rem;
+    letter-spacing: 0.13rem;
+    margin-bottom: 0.8rem;
+  }
+  .popup .popup__subtitle {
+    margin: 0rem 0rem 2.25rem 0rem;
+    letter-spacing: 0.08rem;
+  }
+  .popup .popup__text {
+    font-size: 1.3rem;
+    line-height: 100%;
+    margin: 0rem 0rem 2.5rem 0rem;
+  }
+  .popup .popup__list li {
+    margin-left: 1.45rem;
+    margin-bottom: 0.4rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -939,6 +981,30 @@ h5 {
   }
   .pets .slider .control-panel .arrow {
     display: block;
+  }
+  .popup .popup__content {
+    width: 24rem;
+    height: 34.1rem;
+    margin-top: 26.3rem;
+  }
+  .popup .popup__img {
+    display: none;
+  }
+  .popup .popup__title, .popup .popup__subtitle {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .popup .popup__title {
+    letter-spacing: 0.13rem;
+    margin-bottom: 0.8rem;
+  }
+  .popup .popup__subtitle {
+    margin: 0rem 0rem 2.25rem 0rem;
+    letter-spacing: 0.08rem;
+  }
+  .popup .popup__text {
+    margin: 0rem 0rem 3rem 0rem;
   }
 }
 
@@ -1474,7 +1540,7 @@ h5 {
   top: 0;
   right: 32rem;
   height: 200rem;
-  width: 100rem;
+  width: 250rem;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
   -webkit-transition: opacity 250ms linear;
