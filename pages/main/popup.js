@@ -1,7 +1,7 @@
 // let pets = [];
 // let fullPetsList = [];
 let popup = document.querySelector('.popup');
-let slide = document.querySelector('.slide');
+let slides = document.querySelectorAll('.slide');
 // let title = document.querySelector('.');
 // let subtitle = document.querySelector('.');
 // let text = document.querySelector('.');
@@ -39,7 +39,9 @@ function onClickClose(elem) {                             // вызвать в �
 
 //listeners
 cancelBtn.addEventListener('click', hidePopup);
-slide.addEventListener('click', showPopup);
+slides.forEach(slide => {
+    slide.addEventListener('click', showPopup);
+});
 
 //run
 hidePopup()
