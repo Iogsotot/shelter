@@ -23,6 +23,8 @@ html {
 
 body {
   min-width: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -297,12 +299,16 @@ h5 {
 
 .nav__item {
   display: inline-block;
-  color: #545454;
+  color: #CDCDCD;
 }
 
 .nav__item--active {
-  color: #FDDCC4;
+  color: #fafafa;
   border-bottom: 3px solid #F1CDB3;
+}
+
+.nav__item--active .nav__link {
+  color: #fafafa;
 }
 
 .nav__item:hover .nav__link {
@@ -338,7 +344,59 @@ h5 {
     display: inline-block;
   }
   .header__nav__list {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 32rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    background-color: #292929;
+    z-index: 5;
+  }
+  .nav__item {
+    margin: 2.1rem 0;
+  }
+  .nav__link {
+    font-size: 3.2rem;
+    line-height: 4.9rem;
+  }
+  .burger__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 25.4rem;
+    text-align: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 3.2rem 1rem 13.9rem 1rem;
+  }
+  .burger__icon--twin {
+    margin-top: 1.1rem;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 

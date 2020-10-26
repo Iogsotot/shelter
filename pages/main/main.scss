@@ -23,6 +23,8 @@ html {
 }
 body {
     min-width: 300px;
+    overflow-y: scroll;         //
+    overflow-x: hidden;         //защита от горизонтального скролла - проверить
 }
 
 .wrapper {
@@ -327,11 +329,14 @@ h5 {
 
 .nav__item {
     display: inline-block;
-    color: $color-dark-title;
+    color: $color-disabled;
 
     &--active {
-        color: $primary-color--light;
+        color: $color-medium;
         border-bottom: 3px solid $primary-color;
+        .nav__link {
+            color: $color-medium;
+        }
     }
     &:hover .nav__link {
         color: $color-medium;
@@ -359,6 +364,7 @@ h5 {
         justify-content: space-between;
     }
     .header__nav {
+        // position: relative;
         width: auto;
         padding-top: 1rem;
         padding-right: 4.3rem;
@@ -367,7 +373,44 @@ h5 {
         display: inline-block;
     }
     .header__nav__list {
-        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        height: 100vh;
+        width: 32rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: nowrap;
+        
+        background-color: $color-dark;
+
+        z-index: 5;
+    }
+    .nav__item {
+        margin: 2.1rem 0;
+    }
+    .nav__link {
+        font-size: 3.2rem;
+        line-height: 4.9rem;
+    }
+    .burger__logo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 25.4rem;
+
+        text-align: center;
+        align-self: flex-start;
+        margin: 3.2rem 1rem 13.9rem 1rem;
+    }
+    .burger__icon--twin {
+        margin-top: 1.1rem;
+        transform: rotate(90deg);
     }
 }
 
