@@ -121,7 +121,26 @@ getData().then((data) => {
 
 // slidersBtns.forEach(sliderBtn => {  sliderBtn.addEventListener('click', console.log('жмяк'))});
 
+// slidersBtns.forEach(sliderBtn => {
+//     sliderBtn.onclick = function(e) {
+//     if (e.target.matches('.slide')) {
+//         slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
+//     }
+//   };
+// })
 
+
+//polyfill for .matches
+// (function(e) {
+//     var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
+//     !matches ? (e.matches = e.matchesSelector = function matches(selector) {
+//         var matches = document.querySelectorAll(selector);
+//         var th = this;
+//         return Array.prototype.some.call(matches, function(e) {
+//             return e === th;
+//         });
+//     }) : (e.matches = e.matchesSelector = matches);
+// })(Element.prototype);
 
 // setTimeout( () => {slideElements.forEach(slide => {
 //     slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
