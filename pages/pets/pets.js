@@ -107,15 +107,25 @@ getData().then((data) => {
     petsData = data;
     createSlides(data.sort(() => .5 - Math.random()).slice(0, 8))
     let slideElements = document.querySelectorAll('.slide');
-    slideElements.forEach(slide => {
-      slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
-    });
+    // slideElements.forEach(slide => {
+    //   slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
+    // });
     slidersBtns.forEach(sliderBtn => {
-      sliderBtn.addEventListener("click", function(){createSlides(data.sort(() => .5 - Math.random()).slice(0, 8))})
+      sliderBtn.addEventListener("click", () => {createSlides(data.sort(() => .5 - Math.random()).slice(0, 8))})
     });
+    slideElements.forEach(slide => {
+        slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
+      });
   }
 );
+
+// slidersBtns.forEach(sliderBtn => {  sliderBtn.addEventListener('click', console.log('жмяк'))});
+
+
 
 // setTimeout( () => {slideElements.forEach(slide => {
 //     slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
 // });}, 200)
+
+
+

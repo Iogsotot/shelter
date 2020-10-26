@@ -850,7 +850,7 @@ h5 {
     }
     .popup__list {
         font-size: 1.5rem;
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
 
         li {

@@ -537,7 +537,7 @@ h5 {
 
 .popup .popup__list {
   font-size: 1.5rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -702,6 +702,7 @@ h5 {
   overflow: hidden;
   background-color: #fafafa;
   text-align: center;
+  cursor: pointer;
 }
 
 .img-box {
