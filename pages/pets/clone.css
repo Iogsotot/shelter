@@ -42,7 +42,7 @@ body {
   justify-content: space-between;
 }
 
-.burger__icon, .burger__icon--twin {
+.burger__icon {
   display: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -324,7 +324,7 @@ h5 {
     padding-top: 1.6rem;
     padding-right: 4.3rem;
   }
-  .burger__icon, .burger__icon--twin {
+  .burger__icon {
     display: inline-block;
     cursor: pointer;
     -webkit-transition: all 300ms linear;
@@ -1030,4 +1030,4 @@ h5 {
   -webkit-transition: all 250ms linear;
   transition: all 250ms linear;
 }
-/*# sourceMappingURL=pets.css.map */
+/*# sourceMappingURL=clone.css.map */
