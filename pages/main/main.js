@@ -4,12 +4,12 @@ let slideButtons = document.querySelectorAll('.slide-btn');
 
 async function getData() {
   return fetch('./../../assets/pets.json')
-  .then((response) => {
-    return response.json()
-  })
-  .then((jsonResponse) => {
-    return jsonResponse
-  })
+    .then((response) => {
+      return response.json()
+    })
+    .then((jsonResponse) => {
+      return jsonResponse
+    })
 }
 
 const createSlide = function createSlide(pet) {
@@ -104,14 +104,20 @@ function isVisible(elem) {
 }
 
 getData().then((data) => {
-    petsData = data;
-    createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))
-    let slideElements = document.querySelectorAll('.slide');
-    slideElements.forEach(slide => {
-      slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
-    });
-    slideButtons.forEach(slideBtn => {
-      slideBtn.addEventListener("click", function(){createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))})
-    });
-  }
+  petsData = data;
+  createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))
+  let slideElements = document.querySelectorAll('.slide');
+  slideElements.forEach(slide => {
+    slide.addEventListener('click', function (event) { openPopup(event, this.querySelector('.slide__title').textContent) }, true);
+  });
+  slideButtons.forEach(slideBtn => {
+    slideBtn.addEventListener("click", function () {
+      createSlides(data.sort(() => .5 - Math.random()).slice(0, 3))
+      let slideElements = document.querySelectorAll('.slide');
+      slideElements.forEach(slide => {
+        slide.addEventListener('click', function (event) { openPopup(event, this.querySelector('.slide__title').textContent) }, true);
+      });
+    })
+  });
+}
 );
