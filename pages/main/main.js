@@ -30,9 +30,11 @@ const createSlide = function createSlide(pet) {
 function createSlides(slides) {
   let el = document.querySelector('.slides');
   let slidesHTML = [];
+  // console.log(slidesHTML)
   for (let slide of slides) {
-    slidesHTML.push(createSlide(slide))
+    slidesHTML.push(createSlide(slide));
   }
+  // el.classList.add('slide-in-animation');
   el.innerHTML = slidesHTML.join('');
 }
 

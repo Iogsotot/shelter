@@ -110,15 +110,29 @@ getData().then((data) => {
     // slideElements.forEach(slide => {
     //   slide.addEventListener('click', function(event){openPopup(event, this.querySelector('.slide__title').textContent)}, true);
     // });
+    let paginationArr = data.sort(() => .5 - Math.random())
     slidersBtns.forEach(sliderBtn => {
         sliderBtn.addEventListener("click", () => {
-            createSlides(data.sort(() => .5 - Math.random()).slice(0, 8))
+            console.log(paginationArr)
+            let currentPage = createSlides(paginationArr.slice(0, 8))
             let slideElements = document.querySelectorAll('.slide');
             slideElements.forEach(slide => {
                 slide.addEventListener('click', function (event) { openPopup(event, this.querySelector('.slide__title').textContent) }, true);
             });
         })
     });
+    // slidersDoubleBtns.forEach(sliderDoubleBtn => {
+    //     sliderDoubleBtn.addEventListener("click", () => {
+    //         let currentPage = createSlides(paginationArr.slice(0, 8))
+    //         // ЗАменить для пагинации
+    //         let slideElements = document.querySelectorAll('.slide');
+    //         slideElements.forEach(slide => {
+    //             slide.addEventListener('click', function (event) { openPopup(event, this.querySelector('.slide__title').textContent) }, true);
+    //         });
+    //         // 
+
+    //     })
+    // });
     slideElements.forEach(slide => {
         slide.addEventListener('click', function (event) { openPopup(event, this.querySelector('.slide__title').textContent) }, true);
     });

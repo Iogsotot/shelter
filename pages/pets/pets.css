@@ -238,8 +238,8 @@ h5 {
 
 /* HEADER Start */
 .header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   height: 12rem;
   padding-top: 3.2rem;
@@ -274,7 +274,7 @@ h5 {
 
 .header__nav {
   padding-top: 1.4rem;
-  width: 44.3rem;
+  width: 47.8rem;
 }
 
 .header__nav__list {
@@ -417,6 +417,7 @@ h5 {
 /* HEADER End */
 /* PETS Start */
 .pets {
+  margin-top: 12rem;
   height: 134.2rem;
   padding: 8.2rem 0 10rem;
   background-color: #f6f6f6;
