@@ -24,12 +24,9 @@ html {
 body {
     position: relative;
     min-width: 300px;
-    overflow-y: scroll;         //
-    overflow-x: hidden;         //защита от горизонтального скролла - проверить
+    overflow-y: scroll;
+    overflow-x: hidden;        
 }
-// main {
-//     position: relative;
-// }
 
 .extra-wrapper {
     position: relative;
@@ -38,7 +35,6 @@ body {
 }
 
 .wrapper {
-    // position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -46,9 +42,8 @@ body {
     max-width: 1200px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    // justify-content: center;
+
     justify-content: space-between;
-    // overflow-x: hidden;  
 }
 
 .burger__icon--twin, .burger__icon, .control-panel{
@@ -98,16 +93,9 @@ $gradient-bg--footer: url("../../assets/images/noise_transparent@2x.png"),
 radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), 
 #211F20;
 
-// .img {
-// }
-// .icon {
-// }
 
 // Buttons
 .btn {
-    // display: inline-block;
-    // width: 20.7rem;
-    // height: 5.2rem;
     margin: 0 auto;         
 
     padding: 1.5rem 4.5rem;
@@ -137,8 +125,6 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
 .btn--ghost {
     background-color: transparent;
 }
-// .btn--ghost:hover {
-// }
 
 .btn--round {
     position: relative;
@@ -150,8 +136,6 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
     line-height: none;
     letter-spacing: unset;
 }
-// .btn--round:hover {
-// }
 .btn--round:disabled {
     color: $color-disabled;
     border-color: $color-disabled;
@@ -268,17 +252,6 @@ h5 {
 .logo-link {
     text-decoration: none;
 }
-// .links:active {
-// }
-// .links:hover {
-// }
-
-// .links--dark {
-// }
-// .links--dark:active {
-// }
-// .links--dark:hover {
-// }
 
 /* HEADER Start */
 .header {
@@ -387,7 +360,6 @@ h5 {
         position: absolute;
         top: 0;
         right: -32rem;
-        // right: 0rem;
 
         height: 100vh;
         width: 32rem;
@@ -449,11 +421,6 @@ h5 {
     & .btn {
         margin: 0;
         padding: 1.3rem 4.57rem;
-        padding-left: 4.27rem;;    //del    PP
-        padding-right: 4.3rem;     //del    PP
-        padding-top: 1.4rem;       //del    PP
-        padding-bottom: 1.2rem;    //del    PP
-        letter-spacing: 0.103rem;  //del    PP
     }
 }
 
@@ -464,12 +431,7 @@ h5 {
     justify-content: center;    
     align-items: flex-start;
 
-    // height: 65.1rem;         вернуть после кросс-чека
-
-
-    height: 50rem;              //del
-    align-self: flex-end;       //del
-    margin-bottom: 15.4rem;     //del
+    height: 65.1rem;       
 }
 
 .start-screen__title {
@@ -479,9 +441,7 @@ h5 {
 }
 
 .start-screen__text {
-    height: 8.5rem;                         // del
     width: 46rem;                          
-    margin: 4.25rem 4.2rem 2.7rem 0rem;     //del
     letter-spacing: 0;
 
     color: $color-disabled;
@@ -504,7 +464,7 @@ h5 {
 
     .start-screen {
         height: 124.5rem;
-        padding: 13.9rem 0rem 0rem;             // PP (было 14rem)
+        padding: 14rem 0rem 0rem;    
 
         & .wrapper {
             flex-direction: column;
@@ -520,7 +480,6 @@ h5 {
 
         & .btn {
             align-self: center;
-            margin-left: -0.1rem;       //PP pron
         }
     }
 
@@ -530,14 +489,6 @@ h5 {
         margin-top: 10rem;
     }
 }
-
-// @-moz-document url-prefix() {
-//     @media (max-width: 1279px) {
-//         & .btn {
-//             margin-left: unset;       //PP pron
-//         }
-//     }
-// }
 
 @media (max-width: 767px) {
     .start-screen {
@@ -595,9 +546,8 @@ h5 {
 }
 .about__title {
     width: 37rem;
-    // height: 9rem;
-    padding-top: 1.4rem;   //PP
-    letter-spacing: 0.21rem;  //PP
+    padding-top: 1.4rem;   
+    letter-spacing: 0.21rem;  
     margin-bottom: 1rem;
 }
 .about__text {
@@ -626,7 +576,6 @@ h5 {
     } 
 
     .about__text-block {
-        // height: 39.4rem;
         height: unset;
         margin: 0;
         margin-bottom: 8rem;
@@ -634,7 +583,6 @@ h5 {
         align-self: center;
     }
     .about__title {
-        // margin-bottom: 1.1rem;
         padding-top: 1.6rem;
     }
     .about__text:first-of-type {
@@ -699,7 +647,6 @@ h5 {
 
     & .slide .btn {
         padding: 1.3rem 4.35rem;    //PP
-        // padding-top: 1.4rem;        //PP
         letter-spacing: 0.1rem;     //PP
     }
 }
@@ -730,8 +677,6 @@ h5 {
     transform: translate(-50%);
 }
 
-// .arrow {
-// }
 .arrow--left {
     margin-right: 5.3rem;    
 }
@@ -739,7 +684,6 @@ h5 {
     height: 43.5rem;
     width: 27rem;
     flex-shrink: 0;
-    // margin: 5.8rem 0.8rem;
     margin: 5.8rem 0.1rem 5.95rem;   //PP
 
     border: 0px solid transparent;
@@ -747,16 +691,7 @@ h5 {
     background-color: $color-medium;
     text-align: center;
     overflow: hidden;
-
-    // opacity: 1;
-    // transform: translateY(0rem);
-
 }
-
-// .slide-out-animation {
-//     opacity: 0.2;
-//     transform: translateY(-10rem);
-// }
 
 .img-box {
     width: 27rem;
@@ -780,9 +715,7 @@ h5 {
 }
 
 .popup {
-    // display: none;
     position:fixed;
-    // position:sticky;
     top:0px;
     z-index: 1;
     width:100%;
@@ -821,8 +754,6 @@ h5 {
             background-position: center;
             border: 2px solid #F1CDB3;
             border-radius: 10rem;
-            /* width: 2.5rem; */
-            /* height: 2.5rem; */
             height: auto;
             width: auto;
             padding: 2.4rem;
@@ -900,9 +831,6 @@ h5 {
     .slide:first-of-type {
         margin-right: 4rem;
     }
-    // .slide .img-box {
-    //     // margin-left: -0.1rem;    //PP pron
-    // }
     .slide {
         margin: 5.8rem 0.05rem 5.95rem;   //PP
     }
@@ -918,38 +846,11 @@ h5 {
             width: 63rem;
             height: 35rem;
             margin-top: 26.3rem;
-            // margin: 18.8rem auto 0;
-        
-            // background-color: $color-medium;
-            // border-radius: 1rem;
-            // box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.25), 
-            //             0px 5px 12px rgba(13, 13, 13, 0.5);
-            
-            // display: flex;
-            // flex-direction: row;
             
             .text-block {
                 margin: 0;
                 padding: 1.1rem 1rem 1rem 1.1rem;
             }
-    
-            // .cancel__btn {
-            //     position: absolute;
-            //     top: -5.2rem;
-            //     right: -4.2rem;
-            //     background-image: url(../../assets/icons/cancel.png);
-            //     background-color: transparent;
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-            //     border: 2px solid #F1CDB3;
-            //     border-radius: 10rem;
-            //     /* width: 2.5rem; */
-            //     /* height: 2.5rem; */
-            //     height: auto;
-            //     width: auto;
-            //     padding: 2.4rem;
-            //     box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-            // }
         }
         .popup__img {
             width: 35rem;
@@ -971,28 +872,23 @@ h5 {
         .popup__text {
             font-size: 1.3rem;
 
-            // font-weight: 400;
+
             line-height: 100%;
-            // letter-spacing: 0.09rem;
-            // text-align: left;
+
     
             margin: 0rem 0rem 2.5rem 0rem;
         }
         .popup__list {
-            // font-size: 1.5rem;
+
     
             li {
-                // color: $primary-color;
+
                 margin-left: 1.45rem;
                 margin-bottom: 0.4rem;
             }
         }
         
-        // .item__name {
-        //     font-weight: bold;
-        //     letter-spacing: 0.21rem;
-        //     margin-right: -0.1rem;
-        // }
+
     }
     
 
@@ -1041,30 +937,6 @@ h5 {
             width: 24rem;
             height: 34.1rem;
             margin-top: 26.3rem;
-            // margin: 18.8rem auto 0;
-            
-        //     .text-block {
-        //         margin: 0;
-        //         padding: 1.1rem 1rem 1rem 1.1rem;
-        //     }
-    
-            // .cancel__btn {
-            //     position: absolute;
-            //     top: -5.2rem;
-            //     right: -4.2rem;
-            //     background-image: url(../../assets/icons/cancel.png);
-            //     background-color: transparent;
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-            //     border: 2px solid #F1CDB3;
-            //     border-radius: 10rem;
-            //     /* width: 2.5rem; */
-            //     /* height: 2.5rem; */
-            //     height: auto;
-            //     width: auto;
-            //     padding: 2.4rem;
-            //     box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-            // }
         }
         .popup__img {
             display: none;
@@ -1085,21 +957,7 @@ h5 {
         .popup__text {   
             margin: 0rem 0rem 3rem 0rem;
         }
-        // .popup__list {
-        //     // font-size: 1.5rem;
-    
-        //     li {
-        //         // color: $primary-color;
-        //         margin-left: 1.45rem;
-        //         margin-bottom: 0.4rem;
-        //     }
-        
-        
-        // .item__name {
-        //     font-weight: bold;
-        //     letter-spacing: 0.21rem;
-        //     margin-right: -0.1rem;
-        // }
+
     }  
 }
 /* PETS End */
@@ -1136,7 +994,6 @@ h5 {
     width: 120rem;
 }
 .icon-block {
-    // width: 15rem;
     height: 11.3rem;
     margin: 0 5rem 5.6rem;      //PP edit
 }
@@ -1241,7 +1098,6 @@ h5 {
     & .wrapper {
         justify-content: center;
         align-items: flex-start;
-        // align-self: start;
     }
 }
 
@@ -1279,9 +1135,7 @@ h5 {
 
     width: 34.9rem;
     height: 4.3rem;
-    // padding: 1rem 1.5rem;
     padding: 1rem 1.4rem 1rem 1.3rem;      //PP
-    // margin: 2rem 0;
 }
 
 .wallet:hover { 
@@ -1290,13 +1144,8 @@ h5 {
 
 .wallet__icon {
     display: block;
-    // width: 3rem;
-    // height: 2.3rem;
     width: 3.54rem;             //PP
     height: 3.1rem;             //PP
-    // vertical-align: bottom;
-    // margin-right: 1.5rem;
-    // margin-top: 0.45rem;
 }
 .wallet__link {
     display: inline-block;
@@ -1481,7 +1330,6 @@ h5 {
 
         & .wrapper {
             flex-wrap: wrap;
-            // justify-content: space-between;
             justify-content: center;
             padding: 0rem 0rem 0rem 0rem;    
         }
@@ -1505,7 +1353,7 @@ h5 {
             margin-right: 0;
             margin-left: 0;
             margin-bottom: 0.5rem;
-            vertical-align: middle;             //PP I know that it's very bad
+            vertical-align: middle;            
         }
         .footer__icon--pin {
             margin: 0;
@@ -1597,7 +1445,7 @@ h5 {
 }
 
 .hide {
-    opacity: 0 !important;              //чтобы не опасаться, что нижние стили перебьют
+    opacity: 0 !important;              
     height: 0;  
     width: 0;  
     z-index: -1;
@@ -1605,10 +1453,7 @@ h5 {
 }
 
 .hide--popup {
-    opacity: 0 !important;              //чтобы не опасаться, что нижние стили перебьют
+    opacity: 0 !important;              
     z-index: -1;
     transition: all 250ms linear;
 }
-
-/*# sourceMappingURL=main.css.map */
-

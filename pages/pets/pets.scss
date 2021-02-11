@@ -24,8 +24,8 @@ html {
 body {
     position: relative;
     min-width: 300px;
-    overflow-y: scroll;         //
-    overflow-x: hidden;         //защита от горизонтального скролла - проверить
+    overflow-y: scroll;        
+    overflow-x: hidden;         
 }
 .extra-wrapper {
     position: relative;
@@ -82,15 +82,11 @@ $gradient-bg--header: url("../../assets/images/noise_transparent@2x.png"),
 $gradient-bg--footer: url("../../assets/images/noise_transparent@2x.png"),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 
-// .img {
-// }
-// .icon {
-// }
 
 // Buttons
 .btn {
     display: inline-block;
-    margin: 0 auto; // костыль?
+    margin: 0 auto; 
 
     padding: 1.5rem 4.5rem;
 
@@ -135,13 +131,11 @@ $gradient-bg--footer: url("../../assets/images/noise_transparent@2x.png"),
     line-height: none;
     letter-spacing: unset;
 }
-// .btn--round:hover {
-// }
+
 .btn.disabled,
 .arrow.disabled {
     color: $color-disabled;
     border-color: $color-disabled;
-    // background-color: $primary-color--ghost;
     fill: $color-disabled;
 
     cursor: not-allowed;
@@ -199,7 +193,6 @@ h5 {
 .text--L {
     font-size: 1.5rem;
     line-height: 160%;
-    // letter-spacing: 0.02rem;
     letter-spacing: 0rem;
 }
 @media (max-width: 767px) {
@@ -245,23 +238,10 @@ h5 {
 .logo-link {
     text-decoration: none;
 }
-// .links:active {
-// }
-// .links:hover {
-// }
-
-// .links--dark {
-// }
-// .links--dark:active {
-// }
-// .links--dark:hover {
-// }
 
 /* HEADER Start */
 
 .header {
-    // position: -webkit-sticky;
-    // position: sticky;
     position: fixed;
     width: 100%;
     top: 0;
@@ -316,7 +296,6 @@ h5 {
 }
 
 .nav__item {
-    // margin-right: 1rem;
     display: inline-block;
     color: $color-dark-title;
 
@@ -368,7 +347,6 @@ h5 {
         position: absolute;
         top: 0;
         right: -32rem;
-        // right: 0rem;
 
         height: 100vh;
         width: 32rem;
@@ -442,9 +420,7 @@ h5 {
 }
 
 .popup {
-    // display: none;
     position: fixed;
-    // position:sticky;
     top: 0px;
     z-index: 1;
     width: 100%;
@@ -482,8 +458,6 @@ h5 {
             background-position: center;
             border: 2px solid #f1cdb3;
             border-radius: 10rem;
-            /* width: 2.5rem; */
-            /* height: 2.5rem; */
             height: auto;
             width: auto;
             padding: 2.4rem;
@@ -552,38 +526,11 @@ h5 {
             width: 63rem;
             height: 35rem;
             margin-top: 26.3rem;
-            // margin: 18.8rem auto 0;
-
-            // background-color: $color-medium;
-            // border-radius: 1rem;
-            // box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.25),
-            //             0px 5px 12px rgba(13, 13, 13, 0.5);
-
-            // display: flex;
-            // flex-direction: row;
 
             .text-block {
                 margin: 0;
                 padding: 1.1rem 1rem 1rem 1.1rem;
             }
-
-            // .cancel__btn {
-            //     position: absolute;
-            //     top: -5.2rem;
-            //     right: -4.2rem;
-            //     background-image: url(../../assets/icons/cancel.png);
-            //     background-color: transparent;
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-            //     border: 2px solid #F1CDB3;
-            //     border-radius: 10rem;
-            //     /* width: 2.5rem; */
-            //     /* height: 2.5rem; */
-            //     height: auto;
-            //     width: auto;
-            //     padding: 2.4rem;
-            //     box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-            // }
         }
         .popup__img {
             width: 35rem;
@@ -605,29 +552,17 @@ h5 {
         }
         .popup__text {
             font-size: 1.3rem;
-
-            // font-weight: 400;
             line-height: 100%;
-            // letter-spacing: 0.09rem;
-            // text-align: left;
 
             margin: 0rem 0rem 2.5rem 0rem;
         }
         .popup__list {
-            // font-size: 1.5rem;
 
             li {
-                // color: $primary-color;
                 margin-left: 1.45rem;
                 margin-bottom: 0.4rem;
             }
         }
-
-        // .item__name {
-        //     font-weight: bold;
-        //     letter-spacing: 0.21rem;
-        //     margin-right: -0.1rem;
-        // }
     }
 }
 
@@ -637,30 +572,6 @@ h5 {
             width: 24rem;
             height: 34.1rem;
             margin-top: 26.3rem;
-            // margin: 18.8rem auto 0;
-
-            //     .text-block {
-            //         margin: 0;
-            //         padding: 1.1rem 1rem 1rem 1.1rem;
-            //     }
-
-            // .cancel__btn {
-            //     position: absolute;
-            //     top: -5.2rem;
-            //     right: -4.2rem;
-            //     background-image: url(../../assets/icons/cancel.png);
-            //     background-color: transparent;
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-            //     border: 2px solid #F1CDB3;
-            //     border-radius: 10rem;
-            //     /* width: 2.5rem; */
-            //     /* height: 2.5rem; */
-            //     height: auto;
-            //     width: auto;
-            //     padding: 2.4rem;
-            //     box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-            // }
         }
         .popup__img {
             display: none;
@@ -682,20 +593,6 @@ h5 {
         .popup__text {
             margin: 0rem 0rem 3rem 0rem;
         }
-        // .popup__list {
-        //     // font-size: 1.5rem;
-
-        //     li {
-        //         // color: $primary-color;
-        //         margin-left: 1.45rem;
-        //         margin-bottom: 0.4rem;
-        //     }
-
-        // .item__name {
-        //     font-weight: bold;
-        //     letter-spacing: 0.21rem;
-        //     margin-right: -0.1rem;
-        // }
     }
 }
 
@@ -708,7 +605,6 @@ h5 {
 .pets__title {
     width: 40rem;
     text-align: center;
-    padding-left: 0.1rem; //PP
 }
 .pets__title > span {
     display: inline-block;
@@ -730,7 +626,6 @@ h5 {
     margin: 2.8rem 0 6rem;
 }
 
-// .slides {}
 
 .control-panel .btn {
     margin: 0rem 0.9rem;
@@ -753,7 +648,6 @@ h5 {
     height: 43.5rem;
     width: 27rem;
 
-    // margin: 5.8rem 0.8rem;
     margin: 3rem 0rem 0rem;
 
     border: 0px solid transparent;
@@ -806,12 +700,6 @@ h5 {
         height: 137rem;
         margin-bottom: 3.5rem;
     }
-    // .arrow--left {
-    //     margin-right: 1.3rem;
-    // }
-    // .arrow--right {
-    //     margin-left: 1.3rem;
-    // }
     .slide {
         margin: 0rem 0rem 3rem; //PP
     }
@@ -900,7 +788,6 @@ h5 {
 .footer-center {
     align-items: flex-start;
     height: 25.3rem;
-    // margin-left: -0.3rem;             //PP
     & .contact:first-of-type {
         margin-bottom: -0.5rem; //PP
     }
@@ -936,7 +823,6 @@ h5 {
 }
 
 .footer__icon--pin:nth-of-type(2) {
-    //PP
     vertical-align: middle; //PP
 }
 
@@ -956,7 +842,6 @@ h5 {
 
         & .wrapper {
             flex-wrap: wrap;
-            // justify-content: space-between;
             justify-content: center;
             padding: 0rem 0rem 0rem 0rem;
         }
@@ -981,7 +866,7 @@ h5 {
             margin-right: unset;
             margin-left: unset;
             margin-bottom: 0.5rem;
-            vertical-align: middle; //PP I know that it's very bad
+            vertical-align: middle; 
         }
         .footer__icon--pin {
             margin: unset;
@@ -1073,7 +958,7 @@ h5 {
 }
 
 .hide {
-    opacity: 0 !important; //чтобы не опасаться, что нижние стили перебьют
+    opacity: 0 !important; 
     height: 0;
     width: 0;
     z-index: -1;
@@ -1081,9 +966,7 @@ h5 {
 }
 
 .hide--popup {
-    opacity: 0 !important; //чтобы не опасаться, что нижние стили перебьют
+    opacity: 0 !important;
     z-index: -1;
     transition: all 250ms linear;
 }
-
-/*# sourceMappingURL=main.css.map */
